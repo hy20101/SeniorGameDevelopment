@@ -39,7 +39,7 @@ public class HealthSystem : MonoBehaviour
         OnHealthPctChanged(currentHealthPct);
     }
 
-    public void getDamage (int damageReceive)
+    public void AddDamage (int damageReceive)
     {
         currentHealth -= damageReceive;
     }

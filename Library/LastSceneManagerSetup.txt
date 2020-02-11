@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/TestHelloInputScene.unity
+- path: Assets/Scenes/TestScene/TestCore_AttackHealth_Pisit.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

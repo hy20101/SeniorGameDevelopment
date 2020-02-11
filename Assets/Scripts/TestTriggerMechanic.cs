@@ -13,6 +13,6 @@ public class TestTriggerMechanic : MonoBehaviour
     void OnTriggerExit(Collider other)
     {
         // Destroy everything that leaves the trigger
-        Destroy(other.gameObject);
+        Debug.Log("กรีีดๆ someone exit " + other.name);
     }
 }

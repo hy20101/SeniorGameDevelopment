@@ -20,12 +20,7 @@ public class EnemyHit : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (canTakeDamage && other.tag == "Player")
-        {
-            other.gameObject.GetComponent<HealthSystem>().getDamage(10);
 
-            StartCoroutine(damageTimer());
-        }
     }
 
     private IEnumerator damageTimer()

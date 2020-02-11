@@ -10,7 +10,7 @@ public class MeleeAttack : MonoBehaviour
     [SerializeField]
     Collider attackRange;
 
-    Unit objectUnit;
+    Unit myUnit;
     //Unit newId;
 
     public int inRangeUnitCount;
@@ -18,11 +18,11 @@ public class MeleeAttack : MonoBehaviour
     float delayTimer;
     bool isDelayAttack;
 
-    public IDictionary<int, Unit> inRangeDict;
+    public Dictionary<int, Unit> inRangeDict;
 
     private void Start()
     {
-        objectUnit = GetComponent<Unit>();
+        myUnit = GetComponent<Unit>();
         //TODO: Find a way to make it search for all colliders then check for the one with right tags
         //attackRange = GetComponents<Unit>();
 
@@ -58,10 +58,21 @@ public class MeleeAttack : MonoBehaviour
     {
         if (isDelayAttack == false)
         {
-            //gameObject.GetComponent<HealthSystem>().getDamage(10);
             Debug.Log("Attacking!!!! Success");
+            //TODO: Add attack damage
+
+            foreach (KeyValuePair<int, Unit> entry in inRangeDict)
+            {
+                // do something with entry.Value or entry.Key
+                if(entry.Value != null)
+                {
+                    Debug.Log("Attacking: id=" + entry.Key + ", name=" + entry.Value.name + ", dmg =" + myUnit.GetUnitAttackPower());
+                    entry.Value.RecieveAttacked(myUnit.GetUnitAttackPower() );
+                }
+            }
+
             isDelayAttack = true;
-            delayTimer = objectUnit.attackDelay();
+            delayTimer = myUnit.attackDelay();
             StartCoroutine("CountDownDelay");
         }
         else
@@ -88,51 +99,4 @@ public class MeleeAttack : MonoBehaviour
             }
         }
     }
-
-    /*private void OnTriggerStay(Collider other)
-    {
-        if (other.tag == "Damagable" || other.tag == "Enemy" || other.tag == "Player")
-        {
-            //Debug.Log(other.tag);
-            if(other.GetComponent<Unit>() != null)
-            {
-                //other.gameObject.GetComponent<HealthSystem>().getDamage(10);
-                Unit newUnit = other.GetComponent<Unit>();
-                int id = newUnit.id;
-                if (id != -1)
-                {
-                    if (!inRangeDict.ContainsKey(id))
-                    {
-                        Debug.Log("check in range");
-                        inRangeDict.Add(id, newUnit);
-                        // TODO: ถ้ามี key  อยู่แล้ว add ไม่ได้  หาวิธีใส่่ทับลงไป
-                        inRangeUnitCount++;
-                        Debug.Log("Add Unit to inRangeDict, total = " + inRangeUnitCount);
-                    }
-                    //Unit u = new Unit();
-                    //u.Attacked();
-                }
-            }
-        }
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.tag == "Damagable" || other.tag == "Enemy" || other.tag == "Player")
-        {
-            //Debug.Log(other.tag);
-            if (other.GetComponent<Unit>() != null)
-            {
-                Unit newUnit = other.GetComponent<Unit>();
-                int id = newUnit.id;
-                if (id != -1)
-                {
-                    inRangeDict.Remove(id);
-                    inRangeUnitCount--;
-                    //Debug.Log("Remove Unit to inRangeDict, total = " + inRangeUnitCount);
-                }
-
-            }
-        }
-    }*/
 }

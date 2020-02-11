@@ -10,50 +10,45 @@ public class Unit : MonoBehaviour
 
     public MeleeAttack meleeAttack;
 
-    HealthSystem hp;
+    public HealthSystem hpSystem;
+
+    //TODO: Change it into equipment system or stat to get Attack damage
+    public int attackPower = 10;
 
     private void Awake()
     {
         if (meleeAttack == null)
         {
-            meleeAttack = GetComponentInParent<MeleeAttack>();
+            meleeAttack = GetComponent<MeleeAttack>();
+        }
+        if (hpSystem == null)
+        {
+            hpSystem = GetComponent<HealthSystem>();
         }
     }
 
 
-    /*public void Attacked()
+    public int GetUnitAttackPower()
     {
-        foreach (Unit u in melee.inRangeDict)
-        {
-            Unit target = u;
-            if (u != null)
-            {
-                u.GetAttackDamage(10);
-            }
-            Debug.Log("check foreach");
-        }
-        Debug.Log("attacked");
-    }*/
+        return attackPower;
+    }
 
-    /*public void RecieveAttacked(int damage)
+    public void RecieveAttacked(int damage)
     {
-        if (GetComponent<HealthSystem>() != null)
+        if (hpSystem != null)
         {
-            GetComponent<HealthSystem>().getDamage(10);
+            //TODO: Close the log during production
+            Debug.Log("Received Damage: " + damage);
+            hpSystem.AddDamage(damage);
         }
-    }*/
+        else
+        {
+            Debug.Log(name + " has no HealthSystem");
+        }
+    }
 
     public float attackDelay()
     {
         return AttackDelayInSecond;
-    }
-
-    public int GetAttackDamage(int attackPower)
-    {
-        if (hp != null)
-        {
-            hp.ModifyHealth(-attackPower);
-        }
-        return attackPower;
     }
 }
