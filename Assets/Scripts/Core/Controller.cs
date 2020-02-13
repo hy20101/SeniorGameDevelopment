@@ -27,7 +27,7 @@ public class Controller : MonoBehaviour
 
     private void Move(float input)
     {
-        transform.Translate(Vector3.forward * input * moveSpeed);
+        transform.Translate(Vector3.forward * input * moveSpeed * Time.deltaTime);
     }
 
     private void Turn(float input)
