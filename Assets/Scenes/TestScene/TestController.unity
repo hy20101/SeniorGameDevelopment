@@ -433,7 +433,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationRate: 200
-  moveSpeed: 50
+  moveSpeed: 80
+  jumpSpeed: 5
   rb: {fileID: 1463696399}
 --- !u!1 &1486810851
 GameObject:
@@ -644,9 +645,10 @@ GameObject:
   - component: {fileID: 1932696872}
   - component: {fileID: 1932696871}
   - component: {fileID: 1932696870}
+  - component: {fileID: 1932696874}
   m_Layer: 0
-  m_Name: Plane
-  m_TagString: Untagged
+  m_Name: groundLayer
+  m_TagString: groundLayer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -658,7 +660,7 @@ MeshCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1932696869}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 3aeb7dadc0c69d54d9e5777e9d5631f1, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -725,3 +727,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &1932696874
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1932696869}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 3.95
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0

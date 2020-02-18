@@ -4,18 +4,23 @@ using UnityEngine;
 
 public class Controller : MonoBehaviour
 {
-    public float rotationRate = 360;
-    public float moveSpeed = 5;
-    public float jumpSpeed = 5;
+    public float rotationRate = 200;
+    public float moveSpeed = 80;
+    public float jumpSpeed = 10;
 
     public Rigidbody rb;
     
     private string moveInputAxis = "Vertical";
     private string turnInputAxis = "Horizontal";
 
+    //for jumping
+    private Collider col;
+    private LayerMask groundLayer;
+
     void start()
     {
-        rb = GetComponent<Rigidbody>();
+        rb = GetComponent<Rigidbody>();//for movement
+        col = GetComponent<Collider>();//for jumping
     }
 
     // Update is called once per frame
@@ -25,11 +30,11 @@ public class Controller : MonoBehaviour
         float turnAxis = Input.GetAxis(turnInputAxis);
 
         ApplyInput(moveAxis, turnAxis);
-
-        if(Input.GetKeyDown(KeyCode.Space))
+        //|| Input.GetKeyDown("joystick button 0")
+        /*if (IsGrounded() && Input.GetKeyDown(KeyCode.Space))
         {
             Jump(100);
-        }
+        }*/
     }
 
     private void ApplyInput(float moveAxis, float turnAxis)
@@ -53,4 +58,9 @@ public class Controller : MonoBehaviour
     {
         rb.AddForce(Vector3.up * jumpSpeed * Time.deltaTime * input, ForceMode.Impulse);
     }
+    //TODO: Fix isGrounded
+    /*private bool IsGrounded()
+    {
+        return Physics.Raycast(transform.position,Vector3.down, col.bounds.extents.y + 0.1f);
+    }*/
 }
