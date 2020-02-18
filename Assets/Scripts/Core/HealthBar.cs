@@ -8,13 +8,19 @@ public class HealthBar : MonoBehaviour
     public Image foregroundImage;
     public float updateSpeedSecond = 0.5f;
 
+    public HealthSystem healthSystem;
+
     private void Awake()
     {
-        GetComponentInParent<HealthSystem>().OnHealthPctChanged += HandleHealthChanged;
+        if (healthSystem != null)
+        {
+            healthSystem.OnHealthPctChanged += HandleHealthChanged;
+        }  
     }
 
     private void HandleHealthChanged(float pct)
     {
+        Debug.Log("Called HandleHeathChanged with " + pct);
         StartCoroutine(ChangeToPct(pct));
     }
 
@@ -25,11 +31,13 @@ public class HealthBar : MonoBehaviour
 
         while(elapsed < updateSpeedSecond)
         {
+
             elapsed += Time.deltaTime;
             foregroundImage.fillAmount = Mathf.Lerp(preChangePct, pct, elapsed / updateSpeedSecond);
-            yield return null;
+            yield return new WaitForEndOfFrame();
         }
 
+        Debug.Log("foregroundImage.fillAmount ");
         foregroundImage.fillAmount = pct;
     }
 }

@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class HealthSystem : MonoBehaviour
 {
-    public int maxHealth;
-    public int currentHealth;
+    public float maxHealth;
+    public float currentHealth;
     bool isAlive;
 
     public event Action<float> OnHealthPctChanged = delegate { };
@@ -24,6 +24,10 @@ public class HealthSystem : MonoBehaviour
             isAlive = false;
             Destroy(gameObject);
         }
+        if (Input.GetKeyDown(KeyCode.V) && tag == "Player")
+        {
+            AddDamage(10);
+        }
     }
 
     public float GetHealthPercent()
@@ -31,17 +35,19 @@ public class HealthSystem : MonoBehaviour
         return currentHealth / maxHealth;
     }
 
-    public void ModifyHealth(int amount)
+    public void ModifyHealth(float amount)
     {
+        // TODO: Delete it later
+        Debug.Log("Modifying Health by " + amount);
         currentHealth += amount;
 
         float currentHealthPct = (float)currentHealth / (float)maxHealth;
         OnHealthPctChanged(currentHealthPct);
     }
 
-    public void AddDamage (int damageReceive)
+    public void AddDamage (float damageReceive)
     {
-        currentHealth -= damageReceive;
+        ModifyHealth(-damageReceive);
     }
 
     public void SetMaxHealth()

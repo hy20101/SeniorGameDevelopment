@@ -379,6 +379,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   foregroundImage: {fileID: 935207039}
   updateSpeedSecond: 0.5
+  healthSystem: {fileID: 1579185826}
 --- !u!1 &493697454
 GameObject:
   m_ObjectHideFlags: 0
