@@ -9,6 +9,7 @@ public class Test_Github : MonoBehaviour
     {
         print("hello world");
         print("pisit is here");
+        print("here come a new one");
     }
 
     // Update is called once per frame
