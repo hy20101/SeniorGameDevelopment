@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CharacterControllerMovement : MonoBehaviour
+public class CharacterControllerMovementAnim : MonoBehaviour
 {
     // Reference https://docs.unity3d.com/ScriptReference/CharacterController.html
     public CharacterController characterController;
+    public Animator animator;
 
     public float speed = 12.0f;
     [Tooltip("Minus gravity for natural gravity")]
@@ -26,6 +27,7 @@ public class CharacterControllerMovement : MonoBehaviour
     void Update()
     {
         Movement();
+        GetInput();
     }
 
     void Movement()
@@ -34,9 +36,10 @@ public class CharacterControllerMovement : MonoBehaviour
         {
             float z = Input.GetAxis("Vertical");
             moveDirection = transform.forward * z;
-            moveDirection *= speed;
+            moveDirection *= speed;   
             Jump();
         }
+        animator.SetFloat("speed", moveDirection.magnitude * Time.deltaTime);
 
         float x = Input.GetAxis("Horizontal");
         rotation = x * rotateSpeed * Time.deltaTime;
@@ -53,5 +56,21 @@ public class CharacterControllerMovement : MonoBehaviour
         {
             moveDirection.y += Mathf.Sqrt(jumpHeight * -2f * gravity);
         }
+    }
+    void GetInput()
+    {
+        if (Input.GetButtonDown("Fire1"))
+        {
+            StartCoroutine(Attacking());
+        }
+    }
+    IEnumerator Attacking()
+    {
+        animator.SetBool("isAttack", true);
+        yield return new WaitForSeconds(0.1f);
+        // TODO: Some Attacking Loic Here
+        animator.SetBool("isAttack", false);
+
+
     }
 }
