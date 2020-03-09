@@ -6,6 +6,7 @@ using System;
 public class Unit : MonoBehaviour
 {
     private float AttackDelayInSecond = 2.0f;
+
     public int id = -1; // Default -1 as invalid id;
 
     public MeleeAttack meleeAttack;
