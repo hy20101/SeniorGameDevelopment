@@ -7,6 +7,8 @@ public class HitBoxController : MonoBehaviour
     public Unit ownerUnit;
     public Collider Col_hitbox;
 
+    EnemyBehaviour enemyBehave;
+
     [SerializeField]
     private MeleeAttack _meleeAttack;
 
@@ -41,8 +43,8 @@ public class HitBoxController : MonoBehaviour
     private void OnTriggerStay(Collider other)
     {
         //Debug.Log("Stayyy " + other.gameObject.name);
-        //.tag == "Damagable" || other.tag == "Enemy" || other.tag == "Player"
-        if (other != null && (other.tag == "Damagable" || other.tag == "Enemy" || other.tag == "OtherPlayer") )
+        if (other != null && (other.tag == "Player" || other.tag == "Damagable" || other.tag == "Enemy" || other.tag == "OtherPlayer") 
+            || other != null && (enemyBehave.IsAutoAttack || other.tag == "Player" || other.tag == "Damagable"))
         {
             //Debug.Log("Stayyy - " + other.gameObject.name);
             //Debug.Log(other.tag);
@@ -91,7 +93,8 @@ public class HitBoxController : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other != null && (other.tag == "Damagable" || other.tag == "Enemy" || other.tag == "OtherPlayer"))
+        if (other != null && (other.tag == "Player" || other.tag == "Damagable" || other.tag == "Enemy" || other.tag == "OtherPlayer") 
+            || other != null && (enemyBehave.IsAutoAttack || other.tag == "Player" || other.tag == "Damagable"))
         {
             //Debug.Log("Exited - " + other.gameObject.name);
             if (other.GetComponent<Unit>() != null && _meleeAttack != null)
@@ -101,7 +104,7 @@ public class HitBoxController : MonoBehaviour
                 //Debug.Log("Known exit unit name = " + newUnit.name + ", id = " + newUnit.id);
                 if (id != -1)
                 {
-                    Debug.Log("Id is not -1 so remove them to Dictionary ");
+                    //Debug.Log("Id is not -1 so remove them to Dictionary ");
                     if (_meleeAttack.inRangeDict.ContainsKey(id))
                     {
                         _meleeAttack.inRangeDict.Remove(id);

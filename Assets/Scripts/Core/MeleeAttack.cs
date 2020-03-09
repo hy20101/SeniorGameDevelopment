@@ -54,7 +54,7 @@ public class MeleeAttack : MonoBehaviour
         }
     }
 
-    IEnumerator Attack()
+    public IEnumerator Attack()
     {
         if (isDelayAttack == false)
         {
@@ -66,7 +66,7 @@ public class MeleeAttack : MonoBehaviour
                 // do something with entry.Value or entry.Key
                 if(entry.Value != null)
                 {
-                    Debug.Log("Attacking: id=" + entry.Key + ", name=" + entry.Value.name + ", dmg =" + myUnit.GetUnitAttackPower());
+                    Debug.Log("Attacking: id =" + entry.Key + ", name =" + entry.Value.name + ", dmg =" + myUnit.GetUnitAttackPower());
                     entry.Value.RecieveAttacked(myUnit.GetUnitAttackPower() );
                 }
             }
@@ -82,7 +82,7 @@ public class MeleeAttack : MonoBehaviour
         return null;
     }
 
-    IEnumerator CountDownDelay()
+    public IEnumerator CountDownDelay()
     {
 
         if(isDelayAttack)
