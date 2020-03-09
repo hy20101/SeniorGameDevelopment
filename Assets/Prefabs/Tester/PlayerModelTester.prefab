@@ -4443,7 +4443,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5728865127160942073}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0a5bf8735e00b5745a00c20d8a109eb2, type: 3}
   m_Name: 
@@ -4480,7 +4480,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 5728865126289647877}
   rotationRate: 360
-  moveSpeed: 12
+  moveSpeed: 60
   jumpSpeed: 5
   rb: {fileID: 7886659059478887089}
 --- !u!1 &5728865127185517483
