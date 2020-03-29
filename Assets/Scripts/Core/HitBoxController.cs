@@ -7,7 +7,7 @@ public class HitBoxController : MonoBehaviour
     public Unit ownerUnit;
     public Collider Col_hitbox;
 
-    EnemyBehaviour enemyBehave;
+    EnemyController enemyBehave;
 
     [SerializeField]
     private MeleeAttack _meleeAttack;
