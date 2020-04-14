@@ -74,11 +74,11 @@ public class HitBoxController : MonoBehaviour
                     //Debug.Log("Id is not -1 so add them to Dictionary ");
                     if (!_meleeAttack.inRangeDict.ContainsKey(id))
                     {
-                        Debug.Log("check in range");
+                        //Debug.Log("check in range");
                         _meleeAttack.inRangeDict.Add(id, newUnit);
                         // TODO: ถ้ามี key  อยู่แล้ว add ไม่ได้  หาวิธีใส่่ทับลงไป
                         _meleeAttack.inRangeUnitCount++;
-                        Debug.Log("Add Unit to inRangeDict, total = " + _meleeAttack.inRangeUnitCount);
+                        //Debug.Log("Add Unit to inRangeDict, total = " + _meleeAttack.inRangeUnitCount);
                     }
                     else
                     {
@@ -109,7 +109,7 @@ public class HitBoxController : MonoBehaviour
                     {
                         _meleeAttack.inRangeDict.Remove(id);
                         _meleeAttack.inRangeUnitCount--;
-                        Debug.Log("Remove Unit to inRangeDict, total = " + _meleeAttack.inRangeUnitCount);
+                        //Debug.Log("Remove Unit to inRangeDict, total = " + _meleeAttack.inRangeUnitCount);
                     }
                     else
                     {

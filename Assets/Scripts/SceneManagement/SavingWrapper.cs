@@ -1,16 +1,18 @@
 using System.Collections;
 using GameDevTV.Saving;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
-namespace InventoryExample.SceneManagement
+namespace GameDevTV.SceneManagement
 {
     public class SavingWrapper : MonoBehaviour
     {
-        [SerializeField] KeyCode saveKey = KeyCode.S;
+        [SerializeField] KeyCode saveKey = KeyCode.P;
         [SerializeField] KeyCode loadKey = KeyCode.L;
         [SerializeField] KeyCode deleteKey = KeyCode.Delete;
         const string defaultSaveFile = "save";
-        
+
         private void Awake() 
         {
             StartCoroutine(LoadLastScene());
@@ -37,7 +39,7 @@ namespace InventoryExample.SceneManagement
 
         public void Load()
         {
-            StartCoroutine(GetComponent<SavingSystem>().LoadLastScene(defaultSaveFile));
+            GetComponent<SavingSystem>().LoadLastScene(defaultSaveFile);
         }
 
         public void Save()

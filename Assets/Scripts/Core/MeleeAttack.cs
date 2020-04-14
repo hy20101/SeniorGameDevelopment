@@ -39,17 +39,17 @@ public class MeleeAttack : MonoBehaviour
         //Debug.Log("Update");
         if (Input.GetButtonDown("Fire1"))
         {
-            Debug.Log("fire");
+            //Debug.Log("fire");
             StartCoroutine("Attack");
         }
         else // Test print all dictionary
-        if (Input.GetKeyDown(KeyCode.I))
+        if (Input.GetKeyDown(KeyCode.J))
         {
-            Debug.Log("I-key print all dictionary");
+            //Debug.Log("J-key print all dictionary");
             // Loop print out dictionary key value
             for (int i = 0; i < inRangeUnitCount; i++)
             {
-                Debug.Log(inRangeDict[inRangeDict.Keys.ElementAt(i)]);
+                //Debug.Log(inRangeDict[inRangeDict.Keys.ElementAt(i)]);
             }
         }
     }
@@ -58,7 +58,7 @@ public class MeleeAttack : MonoBehaviour
     {
         if (isDelayAttack == false)
         {
-            Debug.Log("Attacking!!!! Success");
+            //Debug.Log("Attacking!!!! Success");
             //TODO: Add attack damage
 
             foreach (KeyValuePair<int, Unit> entry in inRangeDict)
@@ -77,7 +77,7 @@ public class MeleeAttack : MonoBehaviour
         }
         else
         {
-            Debug.Log("Attacking!!!! Fail - delayed");
+            //Debug.Log("Attacking!!!! Fail - delayed");
         }
         return null;
     }
