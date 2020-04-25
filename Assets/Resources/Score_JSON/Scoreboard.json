@@ -5,8 +5,16 @@
             "InputScore": 120
         },
         {
+            "InputName": "aaaa",
+            "InputScore": 70
+        },
+        {
             "InputName": "Dmitri",
             "InputScore": 50
+        },
+        {
+            "InputName": "vladimir",
+            "InputScore": 30
         }
     ]
 }
