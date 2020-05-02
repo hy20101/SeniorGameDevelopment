@@ -40,17 +40,16 @@ public class PlayerControllerV3 : MonoBehaviour
         Vector3 Direction = (forward * MoveInput.y + right * MoveInput.x).normalized;
         Vector3 GravityDirection = Vector3.zero;
 
+        //check isGrounded
         if(!characterController.isGrounded)
         {
-            print("!isGrounded"); 
             GravityDirection.y -= Gravity;
         }
         else
         {
-            print("isGrounded");
+            //check for jumping
             if (Input.GetKeyDown("space"))
             {
-                print("ha hoy");
                 GravityDirection.y = JumpSpeed;
                 characterController.Move(GravityDirection * Time.deltaTime);
             }
