@@ -15,7 +15,7 @@ public class EnemyBehaviour : MonoBehaviour
     private NavMeshAgent navComponent;
 
     [SerializeField]
-    private MeleeAttack _meleeAttack;
+    private MeleeAttack _meleeAttack = null;
 
     // Start is called before the first frame update
     void Start()
@@ -35,12 +35,13 @@ public class EnemyBehaviour : MonoBehaviour
         {
             navComponent.SetDestination(target.position);
             navComponent.acceleration = 20f;
-            navComponent.stoppingDistance = 3f;
+            navComponent.stoppingDistance = 2f;
+            if (IsAutoAttack)
+            {
+                _meleeAttack.StartCoroutine("Attack");
+            }
         }
-        if (IsAutoAttack && _meleeAttack.inRangeDict != null)
-        {
-            _meleeAttack.StartCoroutine("Attack");
-        }
+        
     }
 
 }

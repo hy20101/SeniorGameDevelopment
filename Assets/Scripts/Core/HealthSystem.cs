@@ -7,7 +7,10 @@ public class HealthSystem : MonoBehaviour
 {
     public float maxHealth;
     public float currentHealth;
+    public int curDeathCount;
     bool isAlive;
+
+    //SceneTransition sceneTransition;
 
     public event Action<float> OnHealthPctChanged = delegate { };
 
@@ -15,6 +18,7 @@ public class HealthSystem : MonoBehaviour
     {
         isAlive = true;
         currentHealth = maxHealth;
+        //GetComponent<SceneTransition>().deathCount = curDeathCount;
     }
 
     public void Update()
@@ -23,11 +27,16 @@ public class HealthSystem : MonoBehaviour
         {
             isAlive = false;
             Destroy(gameObject);
+            //TODO:
+            /*if (CompareTag("Enemy"))
+            {
+                curDeathCount = sceneTransition.deathCount + 1;
+            }*/
         }
-        if (Input.GetKeyDown(KeyCode.V) && tag == "Player")
+        /*if (Input.GetKeyDown(KeyCode.V) && tag == "Player")
         {
             AddDamage(10);
-        }
+        }*/
     }
 
     public float GetHealthPercent()
@@ -37,7 +46,6 @@ public class HealthSystem : MonoBehaviour
 
     public void ModifyHealth(float amount)
     {
-        // TODO: Delete it later
         Debug.Log("Modifying Health by " + amount);
         currentHealth += amount;
 
@@ -48,10 +56,5 @@ public class HealthSystem : MonoBehaviour
     public void AddDamage (float damageReceive)
     {
         ModifyHealth(-damageReceive);
-    }
-
-    public void SetMaxHealth()
-    {
-        currentHealth = maxHealth;
     }
 }

@@ -42,7 +42,7 @@ public class MeleeAttack : MonoBehaviour
             //Debug.Log("fire");
             StartCoroutine("Attack");
         }
-        else // Test print all dictionary
+        /*else // Test print all dictionary
         if (Input.GetKeyDown(KeyCode.J))
         {
             //Debug.Log("J-key print all dictionary");
@@ -51,7 +51,7 @@ public class MeleeAttack : MonoBehaviour
             {
                 //Debug.Log(inRangeDict[inRangeDict.Keys.ElementAt(i)]);
             }
-        }
+        }*/
     }
 
     public IEnumerator Attack()

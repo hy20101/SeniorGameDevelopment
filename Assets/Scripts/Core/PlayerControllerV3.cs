@@ -30,14 +30,14 @@ public class PlayerControllerV3 : MonoBehaviour
     {
         //GetAxisRaw bc it doesn't add any smooth velocity or something like that
         Vector2 MoveInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
-        Vector3 forward = CamTransform.forward;
+        Vector3 up = CamTransform.up;
         Vector3 right = CamTransform.right;
 
         //Normalize bc when moving in both Ver and Hor it will not add both speed, it stay as 1 speed
-        forward.Normalize();
+        up.Normalize();
         right.Normalize();
 
-        Vector3 Direction = (forward * MoveInput.y + right * MoveInput.x).normalized;
+        Vector3 Direction = (up * MoveInput.y + right * MoveInput.x).normalized;
         Vector3 GravityDirection = Vector3.zero;
 
         //check isGrounded

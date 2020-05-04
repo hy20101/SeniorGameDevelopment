@@ -11,10 +11,12 @@ public class EnemySpawner : MonoBehaviour
     int randomSpawnPoint;
     int randomEnemies;
 
+    SceneTransition sceneTransition;
+
     void Start()
     {
         currentEnemies = 0;
-        InvokeRepeating("SpawnEnemies", 0f, 1f);
+        InvokeRepeating("SpawnEnemies", 3f, 1f);
     }
 
     void SpawnEnemies()
@@ -27,5 +29,4 @@ public class EnemySpawner : MonoBehaviour
             currentEnemies++;
         }
     }
-    
 }

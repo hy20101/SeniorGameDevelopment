@@ -2,16 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using SP.Stats;
 
 public class Unit : MonoBehaviour
 {
     private float AttackDelayInSecond = 2.0f;
 
     public int id = -1; // Default -1 as invalid id;
-
     public MeleeAttack meleeAttack;
-
     public HealthSystem hpSystem;
+
+    [SerializeField] CharacterClass characterClass;
 
     //TODO: Change it into equipment system or stat to get Attack damage
     public int attackPower = 10;

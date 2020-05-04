@@ -43,8 +43,7 @@ public class HitBoxController : MonoBehaviour
     private void OnTriggerStay(Collider other)
     {
         //Debug.Log("Stayyy " + other.gameObject.name);
-        if (other != null && (other.tag == "Player" || other.tag == "Damagable" || other.tag == "Enemy" || other.tag == "OtherPlayer") 
-            || (enemyBehave.IsAutoAttack && (other.tag == "Player" || other.tag == "Damagable")))
+        if (other != null && (other.tag == "Player" || other.tag == "Damagable" || other.tag == "Enemy" || other.tag == "OtherPlayer"))
         {
             //Debug.Log("Stayyy - " + other.gameObject.name);
             //Debug.Log(other.tag);
@@ -93,8 +92,7 @@ public class HitBoxController : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other != null && (other.tag == "Player" || other.tag == "Damagable" || other.tag == "Enemy" || other.tag == "OtherPlayer") 
-            || (enemyBehave.IsAutoAttack && (other.tag == "Player" || other.tag == "Damagable")))
+        if (other != null && (other.tag == "Player" || other.tag == "Damagable" || other.tag == "Enemy" || other.tag == "OtherPlayer"))
         {
             //Debug.Log("Exited - " + other.gameObject.name);
             if (other.GetComponent<Unit>() != null && _meleeAttack != null)
