@@ -54,6 +54,7 @@ public class PauseMenu : MonoBehaviour
 
     public void Exit()
     {
-        SceneManager.LoadScene(0);
+        print("wow");
+        Application.Quit();
     }
 }
