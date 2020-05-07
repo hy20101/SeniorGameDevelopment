@@ -26,11 +26,13 @@ public class EnemyBehaviour : MonoBehaviour
         //target = GameObject.Find("Player").transform;
         IsAutoAttack = true;
         detectionRange = 20f;
+        //target = GameObject.FindWithTag("Player").transform;
     }
 
     // Update is called once per frame
     void Update()
     {
+        target = GameObject.FindWithTag("Player").transform;
         if (Vector3.Distance(target.position, transform.position) <= detectionRange)
         {
             navComponent.SetDestination(target.position);

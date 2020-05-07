@@ -18,6 +18,8 @@ public class CameraController : MonoBehaviour
         minZoom = 10f;
         maxZoom = 20f;
         sensitivity = 5f;
+
+        targetToFollow = GameObject.FindWithTag("Player").transform;
     }
 
     void Update()

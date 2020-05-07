@@ -7,7 +7,7 @@ public class SceneTransition : MonoBehaviour
 {
     //DeathCount deathCount;
     //EnemySpawner enemySpawner;
-
+   
     public bool isEnable;
     public int deathCount;
     public string loadedScene;

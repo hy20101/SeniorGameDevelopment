@@ -6,7 +6,8 @@ public class HealingButton : MonoBehaviour
 {
     HealthSystem hpSystem;
 
-    [SerializeField] int potionCount = 5;
+    public int potionCount = 5;
+    [SerializeField] int recoverAmount = 50;
 
     private void Awake()
     {
@@ -24,9 +25,13 @@ public class HealingButton : MonoBehaviour
             {
                 if (hpSystem.currentHealth != hpSystem.maxHealth)
                 {
-                    hpSystem.ModifyHealth(20);
+                    hpSystem.ModifyHealth(recoverAmount);
                     potionCount--;
                 }
+            }
+            else
+            {
+                Debug.Log("Out of potion!");
             }
         }
     }

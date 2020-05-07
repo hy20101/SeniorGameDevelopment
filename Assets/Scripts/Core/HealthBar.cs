@@ -12,10 +12,12 @@ public class HealthBar : MonoBehaviour
 
     private void Awake()
     {
+        healthSystem = GameObject.FindGameObjectWithTag("Player").GetComponent<HealthSystem>();
+
         if (healthSystem != null)
         {
             healthSystem.OnHealthPctChanged += HandleHealthChanged;
-        }  
+        }
     }
 
     private void HandleHealthChanged(float pct)

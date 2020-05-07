@@ -23,8 +23,6 @@ public class MeleeAttack : MonoBehaviour
     private void Start()
     {
         myUnit = GetComponent<Unit>();
-        //TODO: Find a way to make it search for all colliders then check for the one with right tags
-        //attackRange = GetComponents<Unit>();
 
         delayTimer = 0f;
         isDelayAttack = false;

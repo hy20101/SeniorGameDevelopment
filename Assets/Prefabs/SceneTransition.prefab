@@ -105,4 +105,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7e9413a125ceb944a161fd4e8dc1328, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  load2: 0
+  isEnable: 0
+  deathCount: 0
   loadedScene: 
+  loadedScene2: 

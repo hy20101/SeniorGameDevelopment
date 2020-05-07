@@ -4330,6 +4330,7 @@ MonoBehaviour:
   id: 5
   meleeAttack: {fileID: 0}
   hpSystem: {fileID: 0}
+  characterClass: 0
   attackPower: 10
 --- !u!114 &836833825432043319
 MonoBehaviour:
@@ -4345,6 +4346,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 50
   currentHealth: 0
+  curDeathCount: 0
 --- !u!114 &4577694295703711436
 MonoBehaviour:
   m_ObjectHideFlags: 0

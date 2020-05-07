@@ -43,7 +43,8 @@ public class HitBoxController : MonoBehaviour
     private void OnTriggerStay(Collider other)
     {
         //Debug.Log("Stayyy " + other.gameObject.name);
-        if (other != null && (other.tag == "Player" || other.tag == "Damagable" || other.tag == "Enemy" || other.tag == "OtherPlayer"))
+        if (other != null && (other.tag == "Player" || other.tag == "Damagable" || 
+            other.tag == "Enemy" || other.tag == "OtherPlayer"))
         {
             //Debug.Log("Stayyy - " + other.gameObject.name);
             //Debug.Log(other.tag);
@@ -75,7 +76,6 @@ public class HitBoxController : MonoBehaviour
                     {
                         //Debug.Log("check in range");
                         _meleeAttack.inRangeDict.Add(id, newUnit);
-                        // TODO: ถ้ามี key  อยู่แล้ว add ไม่ได้  หาวิธีใส่่ทับลงไป
                         _meleeAttack.inRangeUnitCount++;
                         //Debug.Log("Add Unit to inRangeDict, total = " + _meleeAttack.inRangeUnitCount);
                     }
@@ -83,8 +83,6 @@ public class HitBoxController : MonoBehaviour
                     {
                         //Debug.Log(newUnit.name + " is already in the dictionary");
                     }
-                    //Unit u = new Unit();
-                    //u.Attacked();
                 }
             }
         }
