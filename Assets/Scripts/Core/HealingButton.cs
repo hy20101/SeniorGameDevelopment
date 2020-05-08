@@ -23,9 +23,13 @@ public class HealingButton : MonoBehaviour
         {
             if (potionCount != 0)
             {
-                if (hpSystem.currentHealth != hpSystem.maxHealth)
+                if (hpSystem.currentHealth < hpSystem.maxHealth)
                 {
                     hpSystem.ModifyHealth(recoverAmount);
+                    if (hpSystem.currentHealth > hpSystem.maxHealth)
+                    {
+                        hpSystem.currentHealth = hpSystem.maxHealth;
+                    }
                     potionCount--;
                 }
             }
