@@ -30,11 +30,11 @@ public class ShopNPC : MonoBehaviour
     {
         if (healButton == null)
         {
-            healButton = GameObject.Find("Player").GetComponent<HealingButton>();
+            healButton = GameObject.FindGameObjectWithTag("Player").GetComponent<HealingButton>();
         }
         if (unit == null)
         {
-            unit = GameObject.Find("Player").GetComponent<Unit>();
+            unit = GameObject.FindGameObjectWithTag("Player").GetComponent<Unit>();
         }
     }
 

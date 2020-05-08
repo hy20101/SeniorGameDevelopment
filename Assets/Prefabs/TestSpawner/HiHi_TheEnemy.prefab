@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5949135729268947441}
   - component: {fileID: 5949135729268947440}
   - component: {fileID: 5949135729268947439}
-  - component: {fileID: 5949135729268947438}
+  - component: {fileID: 275992387373189323}
   m_Layer: 11
   m_Name: Enemy_Col_Hitbox
   m_TagString: Untagged
@@ -110,7 +110,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &5949135729268947438
+--- !u!114 &275992387373189323
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -119,7 +119,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5949135729268947436}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 73ee62d94e7dc5b488fed550b3486fa7, type: 3}
+  m_Script: {fileID: 11500000, guid: e69f468597aad584d80359ee57c5ecb3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   ownerUnit: {fileID: 0}
@@ -141,7 +141,7 @@ GameObject:
   - component: {fileID: 5949135730215676053}
   - component: {fileID: 5949135730215676054}
   - component: {fileID: 2815169575034028733}
-  - component: {fileID: 5949135730828611460}
+  - component: {fileID: 6964046838513530046}
   m_Layer: 0
   m_Name: HiHi_TheEnemy
   m_TagString: Enemy
@@ -292,8 +292,8 @@ MonoBehaviour:
   IsAutoAttack: 0
   detectionRange: 0
   wanderRadius: 0
-  _meleeAttack: {fileID: 0}
---- !u!114 &5949135730828611460
+  _meleeAttack: {fileID: 6964046838513530046}
+--- !u!114 &6964046838513530046
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

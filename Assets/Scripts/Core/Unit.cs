@@ -74,6 +74,7 @@ public class Unit : MonoBehaviour
     {
         if (tag == "Player")
         {
+            //TODO:
             if (weaponUpgrade1 == true)
             {
                 weaponDamage = 15;
