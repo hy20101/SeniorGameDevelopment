@@ -51,12 +51,12 @@ LightmapSettings:
     m_IndirectOutputScale: 1
     m_AlbedoBoost: 1
     m_EnvironmentLightingMode: 0
-    m_EnableBakedLightmaps: 1
+    m_EnableBakedLightmaps: 0
     m_EnableRealtimeLightmaps: 0
   m_LightmapEditorSettings:
     serializedVersion: 12
     m_Resolution: 2
-    m_BakeResolution: 40
+    m_BakeResolution: 2
     m_AtlasSize: 2048
     m_AO: 1
     m_AOMaxDistance: 1
@@ -97,7 +97,7 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
-  m_LightingDataAsset: {fileID: 112000000, guid: 4dc36c1a4ea2da544b4a25c239312ab2,
+  m_LightingDataAsset: {fileID: 112000000, guid: 70ee6cbd811e8b141a225143c6dd2d57,
     type: 2}
   m_UseShadowmask: 1
 --- !u!196 &4
@@ -383,7 +383,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetToFollow: {fileID: 842754953}
-  targetOffset: {x: 0, y: 20, z: -5}
+  cameraOffset: {x: 0, y: 0, z: 0}
   movementSpeed: 0
   minZoom: 5
   maxZoom: 20
@@ -1189,17 +1189,17 @@ PrefabInstance:
     - target: {fileID: 6028691312022462666, guid: 5d2699a344b27f64fb97091003b52a26,
         type: 3}
       propertyPath: m_BoundingSphereOverride.x
-      value: 8.717e-42
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6028691312022462666, guid: 5d2699a344b27f64fb97091003b52a26,
         type: 3}
       propertyPath: m_BoundingSphereOverride.y
-      value: 1.05e-43
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6028691312022462666, guid: 5d2699a344b27f64fb97091003b52a26,
         type: 3}
       propertyPath: m_BoundingSphereOverride.z
-      value: 5.66e-43
+      value: 1.540791e-33
       objectReference: {fileID: 0}
     - target: {fileID: 6028691312022462666, guid: 5d2699a344b27f64fb97091003b52a26,
         type: 3}
@@ -1230,6 +1230,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Shadows.m_NearPlane
       value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6028691312022462666, guid: 5d2699a344b27f64fb97091003b52a26,
+        type: 3}
+      propertyPath: m_BoundingSphereOverride.w
+      value: 5.7756e-41
       objectReference: {fileID: 0}
     - target: {fileID: 6028691312026294151, guid: 5d2699a344b27f64fb97091003b52a26,
         type: 3}
