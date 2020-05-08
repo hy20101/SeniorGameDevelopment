@@ -972,7 +972,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponDamage: 0
   armorHealth: 0
-  id: 2
+  id: 1
   meleeAttack: {fileID: 0}
   hpSystem: {fileID: 0}
   money: 0
@@ -983,6 +983,7 @@ MonoBehaviour:
   armorUpgrade1: 0
   armorUpgrade2: 0
   characterClass: 2
+  charaSelect: {fileID: 0}
 --- !u!114 &4010652137046514657
 MonoBehaviour:
   m_ObjectHideFlags: 0

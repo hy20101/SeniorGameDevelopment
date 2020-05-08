@@ -29,7 +29,7 @@ public class Unit : MonoBehaviour
     public bool armorUpgrade2;
 
     [SerializeField] CharacterClass characterClass;
-    public CharacterSelectionControl charaSelect;
+    //public CharacterSelectionControl charaSelect;
 
     private void Start()
     {
