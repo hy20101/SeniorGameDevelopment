@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Scripts/Core/ScoreSystem/TestScoreSystem/ScoreManager.cs.meta
 guid: d02785cb842d5ea4097c6b1ce068f748
+=======
+guid: c405748d3ac1dce4a94121788714374c
+>>>>>>> 74cf32bd51483f2438cc560aba434dd63944d51f:Assets/Scripts/Core/ScoreSystem/TestScoreSystem/ScoreManager.cs.meta
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
