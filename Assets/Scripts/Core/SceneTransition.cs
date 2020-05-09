@@ -10,7 +10,7 @@ public class SceneTransition : MonoBehaviour
    
     public bool isEnable;
     //public int deathCount;
-    public string loadedScene;
+    //public string loadedScene;
     //public string firstScene;
     //public string secondScene;
     //public string thirdScene;
