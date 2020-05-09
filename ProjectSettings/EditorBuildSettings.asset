@@ -32,4 +32,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TestScene/Test_score.unity
     guid: 8325b9d6d703ed546a0a89adef39b4d0
+  - enabled: 1
+    path: Assets/Scenes/Tour/TourMainMenu.unity
+    guid: 84aab0302b711a94ab636725ac429769
+  - enabled: 1
+    path: Assets/Scenes/Tour/Level1.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/Tour/Level2.unity
+    guid: 96151234b0fc1e64791b24e108245539
+  - enabled: 1
+    path: Assets/Scenes/Tour/Level3.unity
+    guid: 1bfe8d59213c0254cad8d03a95107cca
+  - enabled: 1
+    path: Assets/Scenes/Tour/LevelShop.unity
+    guid: 667254aa3f34e8445b0b2e68c115582a
   m_configObjects: {}

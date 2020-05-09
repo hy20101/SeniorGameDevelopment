@@ -52,9 +52,13 @@ public class PauseMenu : MonoBehaviour
         PauseUI.SetActive(false);
     }
 
+    public void ReturnMainMenu()
+    {
+        SceneManager.LoadScene(0);
+    }
+
     public void Exit()
     {
-        print("wow");
         Application.Quit();
     }
 }
