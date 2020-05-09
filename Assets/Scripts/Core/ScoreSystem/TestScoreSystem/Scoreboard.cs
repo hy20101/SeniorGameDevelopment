@@ -131,7 +131,9 @@ public class Scoreboard : MonoBehaviour
     public void EnterName(string name)
     {
         test.InputName = name;
+        test.InputScore = PlayerPrefs.GetInt("score");
         print("name = " + test.InputName);
+        print("name = " + test.InputScore);
     }
 
     public GameObject EnterNameSlotUI;

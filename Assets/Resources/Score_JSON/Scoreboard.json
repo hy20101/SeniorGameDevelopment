@@ -1,20 +1,12 @@
 {
     "Scores": [
         {
-            "InputName": "hahahahahahahahahahahaha",
-            "InputScore": 120
+            "InputName": "test2",
+            "InputScore": 300
         },
         {
-            "InputName": "aaaa",
-            "InputScore": 70
-        },
-        {
-            "InputName": "Dmitri",
-            "InputScore": 50
-        },
-        {
-            "InputName": "vladimir",
-            "InputScore": 30
+            "InputName": "test1",
+            "InputScore": 0
         }
     ]
 }

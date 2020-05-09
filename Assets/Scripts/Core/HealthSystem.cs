@@ -3,13 +3,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class HealthSystem : MonoBehaviour
 {
     public float maxHealth;
     public float currentHealth;
     public int curDeathCount;
     bool isAlive;
-
+    
+    private int EnemyScore = 100;
     //SceneTransition sceneTransition;
 
     public event Action<float> OnHealthPctChanged = delegate { };
@@ -27,6 +29,8 @@ public class HealthSystem : MonoBehaviour
         {
             isAlive = false;
             Destroy(gameObject);
+            SetScore();
+            //OnDisable();
             //TODO:
             /*if (CompareTag("Enemy"))
             {
@@ -57,4 +61,11 @@ public class HealthSystem : MonoBehaviour
     {
         ModifyHealth(-damageReceive);
     }
+
+    public void SetScore()
+    {
+        ScoreManager.instance.ScorePoint += EnemyScore;
+        ScoreManager.instance.UpdateScoreCounterUI();
+    }
+
 }
