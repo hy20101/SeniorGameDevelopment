@@ -9,16 +9,20 @@ public class SceneTransition : MonoBehaviour
     //EnemySpawner enemySpawner;
    
     public bool isEnable;
-    public int deathCount;
+    //public int deathCount;
     public string loadedScene;
     //public string firstScene;
     //public string secondScene;
     //public string thirdScene;
 
+    [SerializeField] private string toScene;
+    private SceneController sceneController;
+
     private void Start()
     {
         isEnable = false;
-        deathCount = 0;
+        sceneController = GameObject.FindGameObjectWithTag("GameController").GetComponent<SceneController>();
+        //deathCount = 0;
         //gameObject.SetActive(false);
     }
 
@@ -26,7 +30,9 @@ public class SceneTransition : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            SceneManager.LoadScene(loadedScene);
+            sceneController.LoadScene(toScene);
+            //SceneManager.LoadScene(loadedScene);
+            //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
 
