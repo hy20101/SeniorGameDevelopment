@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5444684913147378031
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7440094718786804898}
+  m_Layer: 0
+  m_Name: Spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7440094718786804898
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5444684913147378031}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.22, z: 0.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6470355776008337631}
+  m_RootOrder: 17
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6470355776007897915
 GameObject:
   m_ObjectHideFlags: 0
@@ -899,6 +929,7 @@ GameObject:
   - component: {fileID: 4010652137046514657}
   - component: {fileID: 1987161529758473188}
   - component: {fileID: 2757382586916577755}
+  - component: {fileID: 3439336019892455904}
   - component: {fileID: 6849438643300431893}
   - component: {fileID: 7285615906192309754}
   m_Layer: 0
@@ -936,6 +967,7 @@ Transform:
   - {fileID: 6470355776008263979}
   - {fileID: 6470355776008241127}
   - {fileID: 6470355776008259983}
+  - {fileID: 7440094718786804898}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -983,7 +1015,6 @@ MonoBehaviour:
   armorUpgrade1: 0
   armorUpgrade2: 0
   characterClass: 2
-  charaSelect: {fileID: 0}
 --- !u!114 &4010652137046514657
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1029,6 +1060,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   potionCount: 5
   recoverAmount: 50
+--- !u!114 &3439336019892455904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6470355776007923905}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c17aa55fc88984d4b9921ae3940a69f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletSpawner: {fileID: 5444684913147378031}
+  bullet: {fileID: 2337116252264363902, guid: 2ffa1921a2db2f44a988dce66ad06709, type: 3}
+  speed: 0.0002
+  delay: 3
 --- !u!143 &6849438643300431893
 CharacterController:
   m_ObjectHideFlags: 0

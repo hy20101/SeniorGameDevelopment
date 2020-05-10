@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -32,7 +32,7 @@ public class AnimatorControlTest : MonoBehaviour
             animator.ResetTrigger("DoHelloTrigger");
 
             //Send the message to the Animator to activate the trigger parameter 
-            animator.SetTrigger("DoHello");
+            animator.SetTrigger("DoHelloTrigger");
         }
         if (Input.GetKeyDown(KeyCode.P)) // Pick Up
         {
@@ -101,7 +101,7 @@ public class AnimatorControlTest : MonoBehaviour
         }
 
         //-----Control Float-----//
-        if (Input.GetKeyDown(KeyCode.A))
+        /*if (Input.GetKeyDown(KeyCode.A))
         {
 
             movementSpeed -= 2.0f;
@@ -113,7 +113,7 @@ public class AnimatorControlTest : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.D))
         {
             movementSpeed += 2.0f;
-        }
+        }*/
         animator.SetBool("AliveBool", isalive);
         animator.SetFloat("MoveSpeed", movementSpeed);
 

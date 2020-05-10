@@ -4,27 +4,32 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-    public GameObject projectile;
-    public float projectileSpeed = 100f;
-    public float timer = 5f;
+    public GameObject bulletSpawner;
+    public GameObject bullet;
+    public float speed = 5;
+    public float delay = 3;
 
-    private void Start()
+    void Update()
     {
-        Invoke("TimeOutDestroy", timer);
+        Fire();
     }
 
-    private void Update()
+    void Fire()
     {
         if (Input.GetMouseButtonDown(0))
         {
-            GameObject instProj = Instantiate(projectile, transform.position, Quaternion.identity) as GameObject;
-            Rigidbody instProjRigidBody = instProj.GetComponent<Rigidbody>();
-            instProjRigidBody.AddForce(Vector3.forward * projectileSpeed);
-        }
-    }
+            Debug.Log("Fire bullet");
+            GameObject tempBulletHandler;
+            tempBulletHandler = Instantiate(bullet, bulletSpawner.transform.position, bulletSpawner.transform.rotation) as GameObject;
 
-    void TimeOutDestroy()
-    {
-        Destroy(gameObject);
+            tempBulletHandler.transform.Rotate(Vector3.left * 90);
+
+            Rigidbody tempRigid;
+            tempRigid = tempBulletHandler.GetComponent<Rigidbody>();
+
+            tempRigid.AddForce(transform.forward * speed);
+
+            Destroy(tempBulletHandler, delay);
+        }
     }
 }

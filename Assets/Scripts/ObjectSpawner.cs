@@ -5,19 +5,27 @@ using UnityEngine;
 public class ObjectSpawner : MonoBehaviour
 {
     public GameObject projectile;
-    public GameObject bullet;
+    public float delay = 3;
 
-    private Rigidbody rb;
+    Rigidbody rb;
+    [SerializeField] float speed = 1;
     
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        Fire();
+    }
+
+    void Fire()
+    {
+        if (Input.GetMouseButtonDown(0))
         {
-            //GameObject fireball = Instantiate(projectile, transform) as GameObject;
-            bullet = Instantiate(projectile, transform) as GameObject;
+            GameObject bullet = Instantiate(projectile, transform) as GameObject;
             //rb = fireball.GetComponent<Rigidbody>();
-            rb = bullet.GetComponent<Rigidbody>();
-            rb.velocity = transform.forward * 20;
+            rb = projectile.GetComponent<Rigidbody>();
+            rb.velocity = transform.forward * 20 * Time.deltaTime;
+            //bullet.GetComponent<Rigidbody>().AddForce(transform.forward * speed * Time.deltaTime);
+
+            Destroy(bullet, delay);
         }
     }
 }
