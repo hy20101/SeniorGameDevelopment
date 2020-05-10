@@ -30,9 +30,17 @@ public class SceneTransition : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            sceneController.LoadScene(toScene);
+            //sceneController.LoadScene(toScene);
             //SceneManager.LoadScene(loadedScene);
             //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            if (SceneController.prevScene == "Demo_Level2" && SceneController.currentScene == "Shop")
+            {
+                sceneController.LoadScene("Demo_Level3");
+            }
+            else
+            {
+                sceneController.LoadScene(toScene);
+            }
         }
     }
 

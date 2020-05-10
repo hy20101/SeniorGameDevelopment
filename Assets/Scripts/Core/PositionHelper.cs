@@ -5,31 +5,30 @@ using UnityEngine;
 public class PositionHelper : SceneController
 {
     public Transform player;
+    
+    [SerializeField] Vector3 Position = new Vector3(0f, 0f, 0f);
+    [SerializeField] Vector3 shopPos = new Vector3(1.25f, 0.05f, -0.5f);
 
     public override void Start()
     {
         base.Start();
         player = GameObject.FindWithTag("Player").transform;
-        /*if (prevScene == "Shop")
-        {
-            player.position = new Vector3(0f, 3f, 0f);
-        }*/
+        shopPos = new Vector3(1.25f, 0.05f, -0.5f);
 
         switch (prevScene) {
             case "Demo_Level1":
-                player.position = new Vector3(1.25f, 0.05f, -0.5f);
+                player.position = shopPos;
                 break;
             case "Demo_Level2":
-                player.position = new Vector3(1.25f, 0.05f, -0.5f);
+                player.position = shopPos;
                 break;
             case "Shop":
-                player.position = new Vector3(1f, 3f, 1f);
+                player.position = Position;
+                if (prevScene == "Demo_Level2")
+                {
+                    player.position = Position;
+                }
                 break;
         }
     }
-
-    /*private void Update()
-    {
-        player = GameObject.FindWithTag("Player").transform;
-    }*/
 }

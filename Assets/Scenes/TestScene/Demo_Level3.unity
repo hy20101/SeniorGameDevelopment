@@ -161,7 +161,7 @@ PrefabInstance:
     - target: {fileID: 1876340876574556796, guid: 8d566a924a2292f4789d4dbc5e87b072,
         type: 3}
       propertyPath: m_Name
-      value: Scene Manager
+      value: UIManager
       objectReference: {fileID: 0}
     - target: {fileID: 1876340876574556798, guid: 8d566a924a2292f4789d4dbc5e87b072,
         type: 3}
@@ -1226,17 +1226,17 @@ PrefabInstance:
     - target: {fileID: 7968134881818125935, guid: baadf3c4a6e1c31499c9ba0db06153ab,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 94.29
+      value: 93.6
       objectReference: {fileID: 0}
     - target: {fileID: 7968134881818125935, guid: baadf3c4a6e1c31499c9ba0db06153ab,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -11.97
+      value: -13
       objectReference: {fileID: 0}
     - target: {fileID: 7968134881818125935, guid: baadf3c4a6e1c31499c9ba0db06153ab,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 33.13
+      value: 32
       objectReference: {fileID: 0}
     - target: {fileID: 7968134881818125935, guid: baadf3c4a6e1c31499c9ba0db06153ab,
         type: 3}
@@ -1442,6 +1442,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: GameController
+      objectReference: {fileID: 0}
+    - target: {fileID: 8441840164036646397, guid: 1374e644a9b9c4d43bc84d450c423fc6,
+        type: 3}
+      propertyPath: Position.x
+      value: 93.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8441840164036646397, guid: 1374e644a9b9c4d43bc84d450c423fc6,
+        type: 3}
+      propertyPath: Position.y
+      value: -13
+      objectReference: {fileID: 0}
+    - target: {fileID: 8441840164036646397, guid: 1374e644a9b9c4d43bc84d450c423fc6,
+        type: 3}
+      propertyPath: Position.z
+      value: 32
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1374e644a9b9c4d43bc84d450c423fc6, type: 3}
