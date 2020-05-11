@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class PlayerControllerV3 : MonoBehaviour
 {
-    AnimatorControlTest animator;
-
     public float MoveSpeed = 10f;
     public float RotationSpeed = 0.3f;
     public float Gravity = 3f;
@@ -18,8 +16,6 @@ public class PlayerControllerV3 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        animator = GetComponent<AnimatorControlTest>();
-
         characterController = GetComponent<CharacterController>();
         CamTransform = Camera.main.transform;
     }
@@ -28,11 +24,6 @@ public class PlayerControllerV3 : MonoBehaviour
     void Update()
     {
         Move();
-        
-        if(Input.GetKeyDown("space"))
-        {
-            animator.animator.SetTrigger("HelloTrgger");
-        }
     }
 
     void Move()

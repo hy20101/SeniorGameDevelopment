@@ -7,8 +7,6 @@ using System.Linq;
 [RequireComponent(typeof(Unit))]
 public class MeleeAttack : MonoBehaviour
 {
-    //AnimatorControlTest animator;
-
     [SerializeField]
     Collider attackRange;
 
@@ -24,8 +22,6 @@ public class MeleeAttack : MonoBehaviour
 
     private void Start()
     {
-        //animator = GetComponent<AnimatorControlTest>();
-
         myUnit = GetComponent<Unit>();
 
         delayTimer = 0f;
@@ -43,8 +39,6 @@ public class MeleeAttack : MonoBehaviour
         {
             //Debug.Log("fire");
             StartCoroutine("Attack");
-
-            
         }
         /*else // Test print all dictionary
         if (Input.GetKeyDown(KeyCode.J))
@@ -78,8 +72,6 @@ public class MeleeAttack : MonoBehaviour
             isDelayAttack = true;
             delayTimer = myUnit.attackDelay();
             StartCoroutine("CountDownDelay");
-
-            //animator.animator.SetTrigger("AttackSword_Slash");
         }
         else
         {
