@@ -29,10 +29,10 @@ public class PlayerControllerV3 : MonoBehaviour
     {
         Move();
         
-        /*if(Input.GetKeyDown("space"))
+        if(Input.GetKeyDown("space"))
         {
             animator.animator.SetTrigger("HelloTrgger");
-        }*/
+        }
     }
 
     void Move()
@@ -54,7 +54,7 @@ public class PlayerControllerV3 : MonoBehaviour
         {
             GravityDirection.y -= Gravity;
         }
-        /*else
+        else
         {
             //check for jumping
             if (Input.GetKeyDown("space"))
@@ -62,7 +62,7 @@ public class PlayerControllerV3 : MonoBehaviour
                 GravityDirection.y = JumpSpeed;
                 characterController.Move(GravityDirection * Time.deltaTime);
             }
-        }*/
+        }
 
         //check for rotation
         if(Direction != Vector3.zero)
