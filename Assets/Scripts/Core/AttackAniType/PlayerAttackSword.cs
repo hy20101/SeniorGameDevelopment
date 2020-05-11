@@ -4,10 +4,9 @@ using UnityEngine;
 using System;
 using System.Linq;
 
-[RequireComponent(typeof(Unit))]
-public class MeleeAttack : MonoBehaviour
+public class PlayerAttackSword : MonoBehaviour
 {
-    //AnimatorControlTest animator;
+    AnimatorControlTest animator;
 
     [SerializeField]
     Collider attackRange;
@@ -24,7 +23,7 @@ public class MeleeAttack : MonoBehaviour
 
     private void Start()
     {
-        //animator = GetComponent<AnimatorControlTest>();
+        animator = GetComponent<AnimatorControlTest>();
 
         myUnit = GetComponent<Unit>();
 
@@ -44,7 +43,7 @@ public class MeleeAttack : MonoBehaviour
             //Debug.Log("fire");
             StartCoroutine("Attack");
 
-            
+
         }
         /*else // Test print all dictionary
         if (Input.GetKeyDown(KeyCode.J))
@@ -68,10 +67,10 @@ public class MeleeAttack : MonoBehaviour
             foreach (KeyValuePair<int, Unit> entry in inRangeDict)
             {
                 // do something with entry.Value or entry.Key
-                if(entry.Value != null)
+                if (entry.Value != null)
                 {
                     Debug.Log("Attacking: id =" + entry.Key + ", name =" + entry.Value.name + ", dmg =" + myUnit.GetUnitAttackPower());
-                    entry.Value.RecieveAttacked(myUnit.GetUnitAttackPower() );
+                    entry.Value.RecieveAttacked(myUnit.GetUnitAttackPower());
                 }
             }
 
@@ -79,7 +78,8 @@ public class MeleeAttack : MonoBehaviour
             delayTimer = myUnit.attackDelay();
             StartCoroutine("CountDownDelay");
 
-            //animator.animator.SetTrigger("AttackSword_Slash");
+            //AttackSword_Slash
+            animator.animator.SetTrigger("AttackSwordTrigger");
         }
         else
         {
@@ -91,9 +91,9 @@ public class MeleeAttack : MonoBehaviour
     public IEnumerator CountDownDelay()
     {
 
-        if(isDelayAttack)
+        if (isDelayAttack)
         {
-            if(delayTimer <=0)
+            if (delayTimer <= 0)
             {
                 isDelayAttack = false;
             }

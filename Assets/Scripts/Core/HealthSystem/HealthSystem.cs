@@ -6,6 +6,9 @@ using UnityEngine;
 
 public class HealthSystem : MonoBehaviour
 {
+    AnimatorControlTest animator;
+    //public Collision collision;
+
     public float maxHealth;
     public float currentHealth;
     public int curDeathCount;
@@ -18,6 +21,9 @@ public class HealthSystem : MonoBehaviour
 
     private void Start()
     {
+        animator = GetComponent<AnimatorControlTest>();
+        //collision = GetComponent<Collision>();
+
         isAlive = true;
         currentHealth = maxHealth;
         //GetComponent<SceneTransition>().deathCount = curDeathCount;
@@ -27,9 +33,14 @@ public class HealthSystem : MonoBehaviour
     {
         if (currentHealth <= 0)
         {
+            print("hay");
             isAlive = false;
-            Destroy(gameObject);
-            SetScore();
+
+            animator.animator.SetBool("DieTrgger", !isAlive);
+
+            StartCoroutine(waitThreeSeconds());
+            /*if (collision.gameObject.tag != "Player")
+            { SetScore(); }*/
             //OnDisable();
             //TODO:
             /*if (CompareTag("Enemy"))
@@ -41,6 +52,13 @@ public class HealthSystem : MonoBehaviour
         {
             AddDamage(10);
         }*/
+    }
+
+    IEnumerator waitThreeSeconds()
+    {
+        print("ha hoi");
+        yield return new WaitForSeconds(3);
+        Destroy(gameObject);
     }
 
     public float GetHealthPercent()

@@ -25,7 +25,7 @@ public class AnimatorControlTest : MonoBehaviour
     void Update()
     {
         //----Control Trigger----//
-        if (Input.GetKeyDown("space")) // Hello
+        /*if (Input.GetKeyDown("space")) // Hello
         {
             print("Say Hello");
             //Reset trigger
@@ -98,7 +98,7 @@ public class AnimatorControlTest : MonoBehaviour
             print("attackBow = " + attackMagic);
 
             animator.SetBool("AttackMagicBool", attackMagic);
-        }
+        }*/
 
         //-----Control Float-----//
         /*if (Input.GetKeyDown(KeyCode.A))
