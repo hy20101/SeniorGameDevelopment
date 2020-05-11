@@ -79,11 +79,7 @@ public class MeleeAttack : MonoBehaviour
             delayTimer = myUnit.attackDelay();
             StartCoroutine("CountDownDelay");
 
-<<<<<<< HEAD
-            animator.animator.SetTrigger("AttackSword_Slash");
-=======
             animator.animator.SetTrigger("AttackSwordTrigger");
->>>>>>> 72441f046fb763944144e841102b6739fb57aab0
         }
         else
         {

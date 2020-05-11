@@ -399,37 +399,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 72955048}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &72955050 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7265232584571292804, guid: baadf3c4a6e1c31499c9ba0db06153ab,
-    type: 3}
-  m_PrefabInstance: {fileID: 72955048}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &72955051 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 7265232584561704552, guid: baadf3c4a6e1c31499c9ba0db06153ab,
-    type: 3}
-  m_PrefabInstance: {fileID: 72955048}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &72955052
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 72955050}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 65086398ef820894bb18ce823a47146e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animator: {fileID: 72955051}
-  isalive: 1
-  attackMuay: 1
-  attackSword: 1
-  attackBow: 1
-  attackMagic: 1
-  movementSpeed: 0
 --- !u!1 &307861334 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 943753689010276279, guid: 78529ce645f7c4c4da6aac89e27931e4,

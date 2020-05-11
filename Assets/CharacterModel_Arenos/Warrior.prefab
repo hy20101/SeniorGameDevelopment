@@ -1540,6 +1540,7 @@ GameObject:
   - component: {fileID: 1622179119486966876}
   - component: {fileID: 6621537243970409409}
   - component: {fileID: 3242333451266409100}
+  - component: {fileID: 6629133930665984007}
   - component: {fileID: 4072923048715406573}
   - component: {fileID: 8655011023693181116}
   m_Layer: 0
@@ -1591,7 +1592,7 @@ Animator:
   m_GameObject: {fileID: 263607339390015212}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: b69174d668ba02d44b14a084b217670a, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e0dee36488379c84bb484b7b2d581f08, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1684,6 +1685,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   potionCount: 5
   recoverAmount: 50
+--- !u!114 &6629133930665984007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 263607339390015212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65086398ef820894bb18ce823a47146e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 263607339382514688}
+  isalive: 1
+  attackMuay: 1
+  attackSword: 1
+  attackBow: 1
+  attackMagic: 1
+  movementSpeed: 0
 --- !u!143 &4072923048715406573
 CharacterController:
   m_ObjectHideFlags: 0
@@ -2151,7 +2171,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 263607339390033528}
-  m_LocalRotation: {x: -0.57854766, y: 0.6324858, z: -0.3525135, w: -0.37547135}
+  m_LocalRotation: {x: -0.5785476, y: 0.63248575, z: -0.35251346, w: -0.3754713}
   m_LocalPosition: {x: -5.8011727, y: -4.1914477, z: -7.447154}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -4523,7 +4543,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 263607339390067468}
-  m_LocalRotation: {x: 0.6324858, y: 0.57854766, z: 0.37547132, w: -0.3525135}
+  m_LocalRotation: {x: 0.63248575, y: 0.57854766, z: 0.37547126, w: -0.3525135}
   m_LocalPosition: {x: -5.801534, y: -4.191418, z: 7.44715}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
