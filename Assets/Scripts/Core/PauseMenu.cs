@@ -8,9 +8,12 @@ public class PauseMenu : MonoBehaviour
     public bool isPause = false;
     public GameObject PauseUI;
 
+    public GameObject HelpUI;
+
     void Start()
     {
         HidePauseMenu();
+        HelpUI.SetActive(false);
     }
 
     // Update is called once per frame
@@ -50,6 +53,16 @@ public class PauseMenu : MonoBehaviour
     private void HidePauseMenu()
     {
         PauseUI.SetActive(false);
+    }
+
+    public void OpenHelp()
+    {
+        HelpUI.SetActive(true);
+    }
+
+    public void CloseHelp()
+    {
+        HelpUI.SetActive(false);
     }
 
     public void ReturnMainMenu()

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerControllerV3 : MonoBehaviour
 {
+    AnimatorControlTest animator;
+
     public float MoveSpeed = 10f;
     public float RotationSpeed = 0.3f;
     public float Gravity = 3f;
@@ -16,6 +18,8 @@ public class PlayerControllerV3 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        animator = GetComponent<AnimatorControlTest>();
+
         characterController = GetComponent<CharacterController>();
         CamTransform = Camera.main.transform;
     }
@@ -24,6 +28,11 @@ public class PlayerControllerV3 : MonoBehaviour
     void Update()
     {
         Move();
+        
+        /*if(Input.GetKeyDown("space"))
+        {
+            animator.animator.SetTrigger("HelloTrgger");
+        }*/
     }
 
     void Move()
@@ -45,7 +54,7 @@ public class PlayerControllerV3 : MonoBehaviour
         {
             GravityDirection.y -= Gravity;
         }
-        else
+        /*else
         {
             //check for jumping
             if (Input.GetKeyDown("space"))
@@ -53,7 +62,7 @@ public class PlayerControllerV3 : MonoBehaviour
                 GravityDirection.y = JumpSpeed;
                 characterController.Move(GravityDirection * Time.deltaTime);
             }
-        }
+        }*/
 
         //check for rotation
         if(Direction != Vector3.zero)

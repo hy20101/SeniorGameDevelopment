@@ -6,6 +6,9 @@ using UnityEngine;
 
 public class HealthSystem : MonoBehaviour
 {
+    AnimatorControlTest animator;
+    //GameObject GO;
+
     public float maxHealth;
     public float currentHealth;
     public int curDeathCount;
@@ -18,6 +21,11 @@ public class HealthSystem : MonoBehaviour
 
     private void Start()
     {
+        animator = GetComponent<AnimatorControlTest>();
+        //GO = GetComponent<GameObject>();
+
+       // print("Tag = "+GO.gameObject.tag);
+
         isAlive = true;
         currentHealth = maxHealth;
         //GetComponent<SceneTransition>().deathCount = curDeathCount;
@@ -25,11 +33,18 @@ public class HealthSystem : MonoBehaviour
 
     public void Update()
     {
+
         if (currentHealth <= 0)
         {
+            print("hay");
             isAlive = false;
-            Destroy(gameObject);
-            SetScore();
+
+            animator.animator.SetBool("AliveBool", isAlive);
+
+            StartCoroutine(waitThreeSeconds());
+
+            
+
             //OnDisable();
             //TODO:
             /*if (CompareTag("Enemy"))
@@ -41,6 +56,18 @@ public class HealthSystem : MonoBehaviour
         {
             AddDamage(10);
         }*/
+    }
+
+    IEnumerator waitThreeSeconds()
+    {
+        print("ha hoi");
+        yield return new WaitForSeconds(3);
+        Destroy(gameObject);
+
+        if (this.tag == "Enemy")
+        {
+            SetScore();
+        }
     }
 
     public float GetHealthPercent()
