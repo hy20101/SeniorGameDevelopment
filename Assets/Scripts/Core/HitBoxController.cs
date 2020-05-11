@@ -46,8 +46,8 @@ public class HitBoxController : MonoBehaviour
         if (other != null && (other.tag == "Player" || other.tag == "Damagable" || 
             other.tag == "Enemy" || other.tag == "OtherPlayer"))
         {
-            //Debug.Log("Stayyy - " + other.gameObject.name);
-            //Debug.Log(other.tag);
+            Debug.Log("Stayyy - " + other.gameObject.name);
+            Debug.Log(other.tag);
 
             // TODO: Remove later
             if(other.GetComponent<Unit>() == null)
@@ -74,10 +74,10 @@ public class HitBoxController : MonoBehaviour
                     //Debug.Log("Id is not -1 so add them to Dictionary ");
                     if (!_meleeAttack.inRangeDict.ContainsKey(id))
                     {
-                        //Debug.Log("check in range");
+                        Debug.Log("check in range");
                         _meleeAttack.inRangeDict.Add(id, newUnit);
                         _meleeAttack.inRangeUnitCount++;
-                        //Debug.Log("Add Unit to inRangeDict, total = " + _meleeAttack.inRangeUnitCount);
+                        Debug.Log("Add Unit to inRangeDict, total = " + _meleeAttack.inRangeUnitCount);
                     }
                     else
                     {

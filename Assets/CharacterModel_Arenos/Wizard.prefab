@@ -1004,7 +1004,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponDamage: 0
   armorHealth: 0
-  id: 1
+  id: 2
   meleeAttack: {fileID: 0}
   hpSystem: {fileID: 0}
   money: 0

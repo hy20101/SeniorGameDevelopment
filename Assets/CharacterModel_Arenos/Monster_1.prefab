@@ -4220,6 +4220,7 @@ GameObject:
   - component: {fileID: 3017810621520554708}
   - component: {fileID: 6264035916179133829}
   - component: {fileID: 5123556483759646162}
+  - component: {fileID: 5660687767392819257}
   m_Layer: 0
   m_Name: Monster_1
   m_TagString: Untagged
@@ -4372,6 +4373,20 @@ MonoBehaviour:
   detectionRange: 0
   wanderRadius: 0
   _meleeAttack: {fileID: 6264035916179133829}
+--- !u!136 &5660687767392819257
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3416840545253967914}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.4
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!1 &3416840545253969828
 GameObject:
   m_ObjectHideFlags: 0

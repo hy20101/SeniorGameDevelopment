@@ -36,9 +36,9 @@ public class HealthSystem : MonoBehaviour
             print("hay");
             isAlive = false;
 
-            animator.animator.SetBool("AliveBool", isAlive);
+            //animator.animator.SetBool("AliveBool", isAlive);
 
-            StartCoroutine(waitThreeSeconds());
+            //StartCoroutine(waitThreeSeconds());
             /*if (collision.gameObject.tag != "Player")
             { SetScore(); }*/
             //OnDisable();

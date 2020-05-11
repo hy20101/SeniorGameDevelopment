@@ -498,7 +498,7 @@ MonoBehaviour:
   enemies:
   - {fileID: 1629152207}
   - {fileID: 1609867082}
-  maxEnemies: 20
+  maxEnemies: 5
   currentEnemies: 0
 --- !u!4 &762287087
 Transform:
