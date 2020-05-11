@@ -392,12 +392,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1210430234 stripped
-BoxCollider:
-  m_CorrespondingSourceObject: {fileID: 385105294288212244, guid: baadf3c4a6e1c31499c9ba0db06153ab,
-    type: 3}
-  m_PrefabInstance: {fileID: 72955048}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1227561257 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7265232584571292804, guid: baadf3c4a6e1c31499c9ba0db06153ab,
@@ -423,20 +417,6 @@ MonoBehaviour:
   attackBow: 1
   attackMagic: 1
   movementSpeed: 0
---- !u!114 &1227561259
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1227561257}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f516e5de0c53954eacde02abe73d5f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attackRange: {fileID: 1210430234}
-  inRangeUnitCount: 0
 --- !u!114 &1227561260
 MonoBehaviour:
   m_ObjectHideFlags: 0
