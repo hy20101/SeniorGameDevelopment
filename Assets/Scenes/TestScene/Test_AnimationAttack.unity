@@ -715,6 +715,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40fd5f8ac043a9b41949caad67cfc42b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GO: {fileID: 1227561257}
   maxHealth: 0
   currentHealth: 0
   curDeathCount: 0
@@ -909,10 +910,15 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 72955049}
+    - target: {fileID: 3017810621520554708, guid: 3482cea3f0bfa884c956f6eb1daf9bce,
+        type: 3}
+      propertyPath: maxHealth
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 3133426137269396358, guid: 3482cea3f0bfa884c956f6eb1daf9bce,
         type: 3}
       propertyPath: attackPower
-      value: 50
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3416840545253967914, guid: 3482cea3f0bfa884c956f6eb1daf9bce,
         type: 3}
