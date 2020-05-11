@@ -70,7 +70,7 @@ public class PlayerAttackSword : MonoBehaviour
                 if (entry.Value != null)
                 {
                     Debug.Log("Attacking: id =" + entry.Key + ", name =" + entry.Value.name + ", dmg =" + myUnit.GetUnitAttackPower());
-                    entry.Value.RecieveAttacked(myUnit.GetUnitAttackPower());
+                    entry.Value.ReceiveAttacked(myUnit.GetUnitAttackPower());
                 }
             }
 

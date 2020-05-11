@@ -20,7 +20,7 @@ public class Unit : MonoBehaviour
     public MeleeAttack meleeAttack;
     public HealthSystem hpSystem;
     public int money;
-    public int attackPower = 10;
+    public float attackPower;
 
     public bool weaponUpgrade1;
     public bool weaponUpgrade2;
@@ -123,12 +123,12 @@ public class Unit : MonoBehaviour
         }
     }
 
-    public int GetUnitAttackPower()
+    public float GetUnitAttackPower()
     {
         return attackPower;
     }
 
-    public void RecieveAttacked(int damage)
+    public void ReceiveAttacked(float damage)
     {
         if (hpSystem != null)
         {

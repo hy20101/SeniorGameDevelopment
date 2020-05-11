@@ -19,11 +19,7 @@ public class HealingButton : MonoBehaviour
 
     private void Update()
     {
-<<<<<<< HEAD
         if (Input.GetKeyDown(KeyCode.H) && tag == "Player")
-=======
-        if (Input.GetKeyDown(KeyCode.F))
->>>>>>> 59c3f04103e7db53abaeb3a4bba5fd089e428f11
         {
             if (potionCount != 0)
             {
