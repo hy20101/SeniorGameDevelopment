@@ -15,6 +15,25 @@ MonoBehaviour:
   foregroundImage: {fileID: 7761801609200307245}
   updateSpeedSecond: 0.3
   healthSystem: {fileID: 0}
+--- !u!114 &3547259647628855011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4317834643768182057}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65086398ef820894bb18ce823a47146e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 4317834643760847891}
+  isalive: 1
+  attackMuay: 1
+  attackSword: 1
+  attackBow: 1
+  attackMagic: 1
+  movementSpeed: 0
 --- !u!1 &7968134881818125933
 GameObject:
   m_ObjectHideFlags: 0
@@ -62,6 +81,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c9779dda35af484a9c71f0d94d0e70c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &987548950760583552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8872609507421551581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65086398ef820894bb18ce823a47146e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 8872609507412213541}
+  isalive: 1
+  attackMuay: 1
+  attackSword: 1
+  attackBow: 1
+  attackMagic: 1
+  movementSpeed: 0
 --- !u!1001 &2255798348934602003
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -75,6 +113,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 921560120407671042, guid: ce81b8df03a4db4498ade195491ca15f,
         type: 3}
+    - target: {fileID: 7237253759177728566, guid: 3b9d1e3875770514cb9bec1c16d492fc,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: e0dee36488379c84bb484b7b2d581f08, type: 2}
     - target: {fileID: 7237253759186807724, guid: 3b9d1e3875770514cb9bec1c16d492fc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -142,9 +185,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b9d1e3875770514cb9bec1c16d492fc, type: 3}
+--- !u!1 &8872609507421551581 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7237253759187134158, guid: 3b9d1e3875770514cb9bec1c16d492fc,
+    type: 3}
+  m_PrefabInstance: {fileID: 2255798348934602003}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8872609507421222591 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7237253759186807724, guid: 3b9d1e3875770514cb9bec1c16d492fc,
+    type: 3}
+  m_PrefabInstance: {fileID: 2255798348934602003}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &8872609507412213541 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 7237253759177728566, guid: 3b9d1e3875770514cb9bec1c16d492fc,
     type: 3}
   m_PrefabInstance: {fileID: 2255798348934602003}
   m_PrefabAsset: {fileID: 0}
@@ -333,11 +388,28 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6470355776015266299, guid: 130c087df6965e84c995000bc40fe261,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: e0dee36488379c84bb484b7b2d581f08, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 130c087df6965e84c995000bc40fe261, type: 3}
+--- !u!1 &4317834643768182057 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6470355776007923905, guid: 130c087df6965e84c995000bc40fe261,
+    type: 3}
+  m_PrefabInstance: {fileID: 7072716232108338664}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4317834643768038711 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6470355776008337631, guid: 130c087df6965e84c995000bc40fe261,
+    type: 3}
+  m_PrefabInstance: {fileID: 7072716232108338664}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &4317834643760847891 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 6470355776015266299, guid: 130c087df6965e84c995000bc40fe261,
     type: 3}
   m_PrefabInstance: {fileID: 7072716232108338664}
   m_PrefabAsset: {fileID: 0}

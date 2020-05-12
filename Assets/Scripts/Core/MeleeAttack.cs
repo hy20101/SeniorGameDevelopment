@@ -39,7 +39,7 @@ public class MeleeAttack : MonoBehaviour
     private void Update()
     {
         //Debug.Log("Update");
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown("Fire1")&&this.tag == "Player")
         {
             //Debug.Log("fire");
             StartCoroutine("Attack");

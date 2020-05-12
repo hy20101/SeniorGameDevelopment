@@ -11,6 +11,8 @@ public class PlayerControllerV3 : MonoBehaviour
     public float Gravity = 3f;
     public float JumpSpeed = 10f;
 
+    float Speed = 0f;
+
     private Transform CamTransform = null;
 
     private CharacterController characterController = null;
@@ -29,10 +31,11 @@ public class PlayerControllerV3 : MonoBehaviour
     {
         Move();
         
-        /*if(Input.GetKeyDown("space"))
+        if(Input.GetKeyDown("space"))
         {
+            print("hello");
             animator.animator.SetTrigger("HelloTrgger");
-        }*/
+        }
     }
 
     void Move()
@@ -49,8 +52,15 @@ public class PlayerControllerV3 : MonoBehaviour
         Vector3 Direction = (up * MoveInput.y + right * MoveInput.x).normalized;
         Vector3 GravityDirection = Vector3.zero;
 
+        Vector2 horizontalVelocity = characterController.velocity;
+        horizontalVelocity = new Vector2(characterController.velocity.x, characterController.velocity.y);
+        Speed = horizontalVelocity.magnitude;
+        
+        animator.animator.SetFloat("MoveSpeed", Speed);
+        
+
         //check isGrounded
-        if(!characterController.isGrounded)
+        if (!characterController.isGrounded)
         {
             GravityDirection.y -= Gravity;
         }
