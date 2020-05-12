@@ -4,10 +4,14 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
+    AnimatorControlTest animator;
+
     public GameObject bulletSpawner;
     public GameObject bullet;
     public float speed = 5;
     public float delay = 3;
+    
+    Transform transform;
 
     Unit unit;
     bool isDelayAttack = false;
@@ -15,6 +19,11 @@ public class Projectile : MonoBehaviour
 
     void Start()
     {
+        animator = GetComponent<AnimatorControlTest>();
+
+        transform = GetComponent<Transform>();
+        
+
         unit = GetComponent<Unit>();
     }
 
@@ -29,6 +38,16 @@ public class Projectile : MonoBehaviour
         {
             if (isDelayAttack == false)
             {
+
+                if(transform.name == "Player_Archer")
+                {
+                    animator.animator.SetTrigger("AttackBowTrigger");
+                }
+                else if(transform.name == "Player_Wizard")
+                {
+                    animator.animator.SetTrigger("AttackMagicTrigger");
+                }
+
                 Debug.Log("Fire bullet");
                 GameObject tempBulletHandler;
                 tempBulletHandler = Instantiate(bullet, bulletSpawner.transform.position, bulletSpawner.transform.rotation) as GameObject;

@@ -57,7 +57,6 @@ public class EnemyBehaviour : MonoBehaviour
             if (IsAutoAttack)
             {
                 _meleeAttack.StartCoroutine("Attack");
-                animator.animator.SetTrigger("AttackSwordTrigger");
             }
         }
         

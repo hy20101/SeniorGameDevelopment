@@ -38,7 +38,7 @@ public class HealthSystem : MonoBehaviour
         {
             isAlive = false;
 
-            //animator.animator.SetBool("AliveBool", isAlive);
+            animator.animator.SetBool("AliveBool", isAlive);
 
             StartCoroutine(waitThreeSeconds());
             /*if (collision.gameObject.tag != "Player")
@@ -58,7 +58,6 @@ public class HealthSystem : MonoBehaviour
 
     IEnumerator waitThreeSeconds()
     {
-        print("ha hoi");
         yield return new WaitForSeconds(3);
         Destroy(gameObject);
 
