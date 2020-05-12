@@ -28,7 +28,7 @@ public class EnemyBehaviour : MonoBehaviour
         navComponent.speed = speed;
         wanderRadius = 7f;
         //target = GameObject.Find("Player").transform;
-        IsAutoAttack = true;
+        IsAutoAttack = false;
         detectionRange = 20f;
         //target = GameObject.FindWithTag("Player").transform;
     }
@@ -43,7 +43,16 @@ public class EnemyBehaviour : MonoBehaviour
             navComponent.acceleration = 20f;
             navComponent.stoppingDistance = 2f;
 
-            animator.animator.SetFloat("Run", navComponent.acceleration);
+            animator.animator.SetFloat("MoveSpeed", navComponent.acceleration);
+
+            if (Vector3.Distance(target.position, transform.position) <= navComponent.stoppingDistance)
+            {
+                IsAutoAttack = true;
+            }
+            else
+            {
+                IsAutoAttack = false;
+            }
 
             if (IsAutoAttack)
             {
