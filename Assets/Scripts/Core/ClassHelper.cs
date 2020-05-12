@@ -12,17 +12,17 @@ public class ClassHelper : MonoBehaviour
     {
         if (CharacterSelectionControl.warriorChoose == true)
         {
-            Debug.Log("Warrior");
+            //Debug.Log("Warrior");
             warriorConfirm = CharacterSelectionControl.warriorChoose;
         }
         else if (CharacterSelectionControl.archerChoose == true)
         {
-            Debug.Log("Archer");
+            //Debug.Log("Archer");
             archerConfirm = CharacterSelectionControl.archerChoose;
         }
         else if (CharacterSelectionControl.wizardChoose == true)
         {
-            Debug.Log("Wizard");
+            //Debug.Log("Wizard");
             wizardConfirm = CharacterSelectionControl.wizardChoose;
         }
     }
