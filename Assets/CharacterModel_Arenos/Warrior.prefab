@@ -1613,6 +1613,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 829907aaf6e111b40b6928c8380ea858, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  AttackDelayInSecond: 0.5
   weaponDamage: 0
   armorHealth: 0
   id: 1

@@ -6,7 +6,6 @@ using SP.Stats;
 
 public class Unit : MonoBehaviour
 {
-    private float AttackDelayInSecond = 1.0f;
     private int thisId;
     private int count;
     private int count1;
@@ -14,6 +13,7 @@ public class Unit : MonoBehaviour
     private int count3;
     private int count4;
 
+    public float AttackDelayInSecond = 1f;
     public int weaponDamage = 0;
     public int armorHealth = 0;
     public int id = -1; // Default -1 as invalid id;
