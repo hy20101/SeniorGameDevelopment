@@ -6,6 +6,8 @@ using System;
 
 public class EnemyBehaviour : MonoBehaviour
 {
+    AnimatorControlTest animator;
+
     public float speed = 5f;
     public Transform target;
     public bool IsAutoAttack;
@@ -20,6 +22,8 @@ public class EnemyBehaviour : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        animator = GetComponent<AnimatorControlTest>();
+
         navComponent = this.gameObject.GetComponent<NavMeshAgent>();
         navComponent.speed = speed;
         wanderRadius = 7f;
@@ -38,9 +42,13 @@ public class EnemyBehaviour : MonoBehaviour
             navComponent.SetDestination(target.position);
             navComponent.acceleration = 20f;
             navComponent.stoppingDistance = 2f;
+
+            animator.animator.SetFloat("Run", navComponent.acceleration);
+
             if (IsAutoAttack)
             {
                 _meleeAttack.StartCoroutine("Attack");
+                animator.animator.SetTrigger("AttackSwordTrigger");
             }
         }
         

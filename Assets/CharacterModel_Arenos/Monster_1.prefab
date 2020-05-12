@@ -4221,6 +4221,7 @@ GameObject:
   - component: {fileID: 6264035916179133829}
   - component: {fileID: 5123556483759646162}
   - component: {fileID: 5660687767392819257}
+  - component: {fileID: 270988974752503387}
   m_Layer: 0
   m_Name: Monster_1
   m_TagString: Enemy
@@ -4387,6 +4388,25 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &270988974752503387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3416840545253967914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65086398ef820894bb18ce823a47146e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 3416840545263216650}
+  isalive: 1
+  attackMuay: 1
+  attackSword: 1
+  attackBow: 1
+  attackMagic: 1
+  movementSpeed: 0
 --- !u!1 &3416840545253969828
 GameObject:
   m_ObjectHideFlags: 0

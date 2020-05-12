@@ -36,13 +36,11 @@ public class HealthSystem : MonoBehaviour
 
         if (currentHealth <= 0)
         {
-            print("hay");
-            print("Also dead");
             isAlive = false;
 
             //animator.animator.SetBool("AliveBool", isAlive);
 
-            //StartCoroutine(waitThreeSeconds());
+            StartCoroutine(waitThreeSeconds());
             /*if (collision.gameObject.tag != "Player")
             { SetScore(); }*/
             //OnDisable();
@@ -67,6 +65,7 @@ public class HealthSystem : MonoBehaviour
         if (this.tag == "Enemy")
         {
             SetScore();
+            KillCounted();
         }
     }
 
@@ -93,6 +92,12 @@ public class HealthSystem : MonoBehaviour
     {
         ScoreManager.instance.ScorePoint += EnemyScore;
         ScoreManager.instance.UpdateScoreCounterUI();
+    }
+
+    public void KillCounted()
+    {
+        KillCountManager.instance.KillCounted++;
+        KillCountManager.instance.UpdateKillCounterUI();
     }
 
 }
