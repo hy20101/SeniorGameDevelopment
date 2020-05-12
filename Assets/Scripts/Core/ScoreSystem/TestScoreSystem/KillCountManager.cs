@@ -14,6 +14,7 @@ public class KillCountManager : MonoBehaviour
     [HideInInspector]
 
     public int KillCounted;
+    public int MaxKill = 10;
 
     void Awake()
     {
@@ -29,7 +30,7 @@ public class KillCountManager : MonoBehaviour
 
     void Update()
     {
-        if(KillCounted == 3)
+        if(KillCounted == MaxKill)
         {
             loadScene();
         }
@@ -38,12 +39,10 @@ public class KillCountManager : MonoBehaviour
     public void UpdateKillCounterUI()
     {
         KillCounterText.text = KillCounted.ToString();
-        print("ha hoi kill");
-        //PlayerPrefs.SetInt("score", ScorePoint);
     }
 
     public void loadScene()
     {
-        SceneManager.LoadScene(7);
+        SceneManager.LoadScene(6);
     }
 }

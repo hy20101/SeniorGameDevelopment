@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6967104577677820606}
   - component: {fileID: 6967104577677820607}
   - component: {fileID: 6967104577677820605}
+  - component: {fileID: 4108381198366175823}
   m_Layer: 0
   m_Name: ScoreManager
   m_TagString: Untagged
@@ -60,3 +61,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   KillCounterText: {fileID: 0}
   KillCounted: 0
+  MaxKill: 10
+--- !u!114 &4108381198366175823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6967104577677820601}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10964f4238a4c4440b0c3986760dac5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MoneyText: {fileID: 0}
+  Money: 0

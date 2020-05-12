@@ -4,18 +4,19 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class ScoreManager : MonoBehaviour
+public class MoneyManager : MonoBehaviour
 {
-    public static ScoreManager instance;
+    public static MoneyManager instance;
+
     [SerializeField]
-    TextMeshProUGUI ScoreCounterText;
+    TextMeshProUGUI MoneyText;
     [HideInInspector]
 
-    public int ScorePoint;
+    public int Money;
 
     void Awake()
     {
-        if(instance == null)
+        if (instance == null)
         {
             instance = this;
         }
@@ -25,9 +26,8 @@ public class ScoreManager : MonoBehaviour
         }
     }
 
-    public void UpdateScoreCounterUI()
+    public void UpdateMoneyUI()
     {
-        ScoreCounterText.text = ScorePoint.ToString();
-        PlayerPrefs.SetInt("score", ScorePoint);
+        MoneyText.text = Money.ToString();
     }
 }

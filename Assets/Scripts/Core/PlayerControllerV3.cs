@@ -56,7 +56,7 @@ public class PlayerControllerV3 : MonoBehaviour
         horizontalVelocity = new Vector2(characterController.velocity.x, characterController.velocity.y);
         Speed = horizontalVelocity.magnitude;
         
-        animator.animator.SetFloat("MoveSpeed", Speed);
+        //animator.animator.SetFloat("MoveSpeed", Speed);
         
 
         //check isGrounded

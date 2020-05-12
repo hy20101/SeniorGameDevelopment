@@ -14,7 +14,8 @@ public class HealthSystem : MonoBehaviour
     public int curDeathCount;
     bool isAlive;
     
-    private int EnemyScore = 100;
+    public int EnemyScore = 100;
+    public int MoneyWorth = 10;
     //SceneTransition sceneTransition;
 
     public event Action<float> OnHealthPctChanged = delegate { };
@@ -38,7 +39,7 @@ public class HealthSystem : MonoBehaviour
         {
             isAlive = false;
 
-            animator.animator.SetBool("AliveBool", isAlive);
+            //animator.animator.SetBool("AliveBool", isAlive);
 
             StartCoroutine(waitThreeSeconds());
             /*if (collision.gameObject.tag != "Player")
@@ -65,6 +66,7 @@ public class HealthSystem : MonoBehaviour
         {
             SetScore();
             KillCounted();
+            MoneyAdded();
         }
     }
 
@@ -99,4 +101,9 @@ public class HealthSystem : MonoBehaviour
         KillCountManager.instance.UpdateKillCounterUI();
     }
 
+    public void MoneyAdded()
+    {
+        MoneyManager.instance.Money += MoneyWorth;
+        MoneyManager.instance.UpdateMoneyUI();
+    }
 }
