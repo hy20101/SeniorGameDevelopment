@@ -4,25 +4,38 @@ using UnityEngine;
 
 public class CharacterSelectionControl : MonoBehaviour
 {
-    public static bool warriorChoose;
-    public static bool archerChoose;
-    public static bool wizardChoose;
+    public static bool warriorChoose = false;
+    public static bool archerChoose = false;
+    public static bool wizardChoose = false;
 
-    public bool warriorSelected()
+    public void warriorSelected()
     {
-        warriorChoose = true;
-        return warriorChoose;
+        //warriorChoose = true;
+        warriorConfirm();
     }
 
-    public bool archerSelected()
+    public void archerSelected()
     {
-        archerChoose = true;
-        return archerChoose;
+        //archerChoose = true;
+        archerConfirm();
     }
 
-    public bool wizardSelected()
+    public void wizardSelected()
     {
-        wizardChoose = true;
-        return wizardChoose;
+        //wizardChoose = true;
+        wizardConfirm();
+    }
+
+    public bool warriorConfirm()
+    {
+        return warriorChoose = true;
+    }
+    public bool archerConfirm()
+    {
+        return archerChoose = true;
+    }
+    public bool wizardConfirm()
+    {
+        return wizardChoose = true;
     }
 }
