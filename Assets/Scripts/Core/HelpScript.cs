@@ -1,16 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class HelpScript : MonoBehaviour
 {
     public GameObject HelpUI;
-    public GameObject AboutUs;
 
     void Start()
     {
         HelpUI.SetActive(false);
-        AboutUs.SetActive(false);
     }
 
     public void OpenHelp()
@@ -23,13 +22,13 @@ public class HelpScript : MonoBehaviour
         HelpUI.SetActive(false);
     }
 
-    public void OpenUS()
+    public void LoadAboutUs()
     {
-        AboutUs.SetActive(true);
+        SceneManager.LoadScene(13);
     }
 
-    public void CloseUS()
+    public void ReturnMainMenu()
     {
-        AboutUs.SetActive(false);
+        SceneManager.LoadScene(0);
     }
 }
