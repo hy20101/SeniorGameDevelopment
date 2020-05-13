@@ -79,7 +79,7 @@ public class ShopNPC : MonoBehaviour
         {
             unit.armorUpgrade1 = true;
             buyButton4.gameObject.SetActive(false);
-            moneyManager.Money -= 50;
+            moneyManager.Money -= 60;
         }
     }
 
@@ -89,7 +89,7 @@ public class ShopNPC : MonoBehaviour
         {
             unit.armorUpgrade2 = true;
             buyButton5.gameObject.SetActive(false);
-            moneyManager.Money -= 50;
+            moneyManager.Money -= 120;
         }
     }
 
@@ -99,6 +99,6 @@ public class ShopNPC : MonoBehaviour
         {
             healButton.potionCount++;
             moneyManager.Money -= 30;
-        }  
+        }
     }
 }
