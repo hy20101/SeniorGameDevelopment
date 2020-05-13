@@ -39,7 +39,7 @@ public class HealthSystem : MonoBehaviour
         {
             isAlive = false;
 
-            //animator.animator.SetBool("AliveBool", isAlive);
+            animator.animator.SetBool("AliveBool", isAlive);
 
             StartCoroutine(waitThreeSeconds());
 
