@@ -5,34 +5,24 @@ using UnityEngine.SceneManagement;
 
 public class SceneTransition : MonoBehaviour
 {
-    //DeathCount deathCount;
-    //EnemySpawner enemySpawner;
-   
     public bool isEnable;
-    //public int deathCount;
-    //public string loadedScene;
-    //public string firstScene;
-    //public string secondScene;
-    //public string thirdScene;
 
     [SerializeField] private string toScene;
     private SceneController sceneController;
+    private KillCountManager killCount;
 
     private void Start()
     {
         isEnable = false;
+        //this.gameObject.SetActive(false);
         sceneController = GameObject.FindGameObjectWithTag("GameController").GetComponent<SceneController>();
-        //deathCount = 0;
-        //gameObject.SetActive(false);
+        killCount = GameObject.Find("ScoreManager").GetComponent<KillCountManager>();
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            //sceneController.LoadScene(toScene);
-            //SceneManager.LoadScene(loadedScene);
-            //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             if (SceneController.prevScene == "Demo_Level2" && SceneController.currentScene == "Shop")
             {
                 sceneController.LoadScene("Demo_Level3");
@@ -44,24 +34,12 @@ public class SceneTransition : MonoBehaviour
         }
     }
 
-    private void Update()
+    /*private void Update()
     {
-        /*if (Input.GetKeyDown(KeyCode.Alpha1))
+        if (killCount.KillCounted == killCount.MaxKill)
         {
-            SceneManager.LoadScene(firstScene);
+            Debug.Log("portal spawn");
+            this.gameObject.SetActive(true);
         }
-        if (Input.GetKeyDown(KeyCode.Alpha2))
-        {
-            SceneManager.LoadScene(secondScene);
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha3))
-        {
-            SceneManager.LoadScene(thirdScene);
-        }*/
-        //TODO:
-        /*if (isEnable == true && deathCount == enemySpawner.maxEnemies)
-        {
-            gameObject.SetActive(true);
-        }*/
-    }
+    }*/
 }

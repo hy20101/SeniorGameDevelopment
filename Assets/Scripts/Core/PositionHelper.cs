@@ -7,7 +7,7 @@ public class PositionHelper : SceneController
     public Transform player;
     
     [SerializeField] Vector3 Position = new Vector3(0f, 0f, 0f);
-    [SerializeField] Vector3 shopPos = new Vector3(1.25f, 0.05f, -0.5f);
+    [SerializeField] Vector3 shopPos = new Vector3(0f, 0f, 0f);
 
     public override void Start()
     {
@@ -30,5 +30,22 @@ public class PositionHelper : SceneController
                 }
                 break;
         }
+        
+        /*if (prevScene == "Demo_Level1")
+        {
+            player.position = shopPos;
+        }
+        else if (prevScene == "Demo_Level2")
+        {
+            player.position = shopPos;
+        }
+        else if (prevScene == "Shop")
+        {
+            player.position = Position;
+            if (prevScene == "Demo_Level2")
+            {
+                player.position = Position;
+            }
+        }*/
     }
 }

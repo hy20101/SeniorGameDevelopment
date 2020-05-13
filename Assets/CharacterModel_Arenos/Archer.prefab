@@ -2309,6 +2309,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 829907aaf6e111b40b6928c8380ea858, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  AttackDelayInSecond: 1
   weaponDamage: 0
   armorHealth: 0
   id: 3
@@ -2337,6 +2338,8 @@ MonoBehaviour:
   maxHealth: 0
   currentHealth: 0
   curDeathCount: 0
+  EnemyScore: 100
+  MoneyWorth: 10
 --- !u!114 &6583977933394459343
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4778,31 +4781,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 955645f89c76a7149b1df5d94e6f3cf4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -20.9
+      value: 10.1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 955645f89c76a7149b1df5d94e6f3cf4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.2
+      value: -18.1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 955645f89c76a7149b1df5d94e6f3cf4, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.7
+      value: -0.4
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 955645f89c76a7149b1df5d94e6f3cf4, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.7071068
+      value: -0.88484156
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 955645f89c76a7149b1df5d94e6f3cf4, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 0.43468067
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 955645f89c76a7149b1df5d94e6f3cf4, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: -0.14792319
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 955645f89c76a7149b1df5d94e6f3cf4, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7071068
+      value: 0.07891052
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 955645f89c76a7149b1df5d94e6f3cf4, type: 3}
       propertyPath: m_RootOrder

@@ -4343,6 +4343,9 @@ MonoBehaviour:
   maxHealth: 50
   currentHealth: 0
   curDeathCount: 0
+  isAlive: 0
+  EnemyScore: 100
+  MoneyWorth: 20
 --- !u!114 &6264035916179133829
 MonoBehaviour:
   m_ObjectHideFlags: 0

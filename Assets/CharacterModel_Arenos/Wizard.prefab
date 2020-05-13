@@ -1031,6 +1031,8 @@ MonoBehaviour:
   maxHealth: 0
   currentHealth: 0
   curDeathCount: 0
+  EnemyScore: 100
+  MoneyWorth: 10
 --- !u!114 &1987161529758473188
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4779,31 +4781,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 495720, guid: 20e0bf298681fcd4693097c822277593, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3
+      value: -8.1
       objectReference: {fileID: 0}
     - target: {fileID: 495720, guid: 20e0bf298681fcd4693097c822277593, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 31.5
+      value: -0.3
       objectReference: {fileID: 0}
     - target: {fileID: 495720, guid: 20e0bf298681fcd4693097c822277593, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -7.7
+      value: 5.8
       objectReference: {fileID: 0}
     - target: {fileID: 495720, guid: 20e0bf298681fcd4693097c822277593, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.7071068
+      value: 0.11939182
       objectReference: {fileID: 0}
     - target: {fileID: 495720, guid: 20e0bf298681fcd4693097c822277593, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 0.8604126
       objectReference: {fileID: 0}
     - target: {fileID: 495720, guid: 20e0bf298681fcd4693097c822277593, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.7071068
+      value: -0.49480233
       objectReference: {fileID: 0}
     - target: {fileID: 495720, guid: 20e0bf298681fcd4693097c822277593, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0
+      value: -0.024625884
       objectReference: {fileID: 0}
     - target: {fileID: 495720, guid: 20e0bf298681fcd4693097c822277593, type: 3}
       propertyPath: m_RootOrder

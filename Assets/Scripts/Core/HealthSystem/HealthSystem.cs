@@ -12,7 +12,7 @@ public class HealthSystem : MonoBehaviour
     public float maxHealth;
     public float currentHealth;
     public int curDeathCount;
-    bool isAlive;
+    public bool isAlive;
     
     public int EnemyScore = 100;
     public int MoneyWorth = 10;
@@ -42,10 +42,10 @@ public class HealthSystem : MonoBehaviour
             //animator.animator.SetBool("AliveBool", isAlive);
 
             StartCoroutine(waitThreeSeconds());
+
             /*if (collision.gameObject.tag != "Player")
             { SetScore(); }*/
             //OnDisable();
-            //TODO:
             /*if (CompareTag("Enemy"))
             {
                 curDeathCount = sceneTransition.deathCount + 1;

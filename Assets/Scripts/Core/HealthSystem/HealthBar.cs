@@ -12,7 +12,11 @@ public class HealthBar : MonoBehaviour
 
     private void Awake()
     {
-        healthSystem = GameObject.FindGameObjectWithTag("Player").GetComponent<HealthSystem>();
+        if (healthSystem == null)
+        {
+            healthSystem = GameObject.FindGameObjectWithTag("Player").GetComponent<HealthSystem>();
+        }
+        //healthSystem = GameObject.FindGameObjectWithTag("Player").GetComponent<HealthSystem>();
 
         if (healthSystem != null)
         {

@@ -2590,13 +2590,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 829907aaf6e111b40b6928c8380ea858, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  AttackDelayInSecond: 1
   weaponDamage: 0
   armorHealth: 0
   id: 6
   meleeAttack: {fileID: 0}
   hpSystem: {fileID: 0}
   money: 0
-  attackPower: 10
+  attackPower: 20
   weaponUpgrade1: 0
   weaponUpgrade2: 0
   weaponUpgrade3: 0
@@ -2618,6 +2619,9 @@ MonoBehaviour:
   maxHealth: 80
   currentHealth: 0
   curDeathCount: 0
+  isAlive: 0
+  EnemyScore: 100
+  MoneyWorth: 40
 --- !u!114 &8157270726935641151
 MonoBehaviour:
   m_ObjectHideFlags: 0

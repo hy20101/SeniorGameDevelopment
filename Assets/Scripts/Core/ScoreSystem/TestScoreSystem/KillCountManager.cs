@@ -28,21 +28,21 @@ public class KillCountManager : MonoBehaviour
         }
     }
 
-    void Update()
+    /*void Update()
     {
-        if(KillCounted == MaxKill)
+        if (KillCounted == MaxKill)
         {
-            loadScene();
+            //loadScene();
         }
-    }
+    }*/
 
     public void UpdateKillCounterUI()
     {
         KillCounterText.text = KillCounted.ToString();
     }
 
-    public void loadScene()
+    /*public void loadScene()
     {
         SceneManager.LoadScene(6);
-    }
+    }*/
 }

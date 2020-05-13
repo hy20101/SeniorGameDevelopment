@@ -15,6 +15,7 @@ public class EnemyBehaviour : MonoBehaviour
     public float wanderRadius;
     
     private NavMeshAgent navComponent;
+    private HealthSystem hpSystem;
 
     [SerializeField]
     private MeleeAttack _meleeAttack = null;
@@ -23,6 +24,7 @@ public class EnemyBehaviour : MonoBehaviour
     void Start()
     {
         animator = GetComponent<AnimatorControlTest>();
+        hpSystem = GetComponent<HealthSystem>();
 
         navComponent = this.gameObject.GetComponent<NavMeshAgent>();
         navComponent.speed = speed;
@@ -30,11 +32,21 @@ public class EnemyBehaviour : MonoBehaviour
         //target = GameObject.Find("Player").transform;
         IsAutoAttack = false;
         detectionRange = 20f;
-        //target = GameObject.FindWithTag("Player").transform;
     }
 
     // Update is called once per frame
     void Update()
+    {
+        moveToAttack();
+
+        if (hpSystem.isAlive == false)
+        {
+            speed = 0;
+            detectionRange = 0;
+        }
+    }
+
+    void moveToAttack()
     {
         target = GameObject.FindWithTag("Player").transform;
         if (Vector3.Distance(target.position, transform.position) <= detectionRange)
@@ -59,7 +71,5 @@ public class EnemyBehaviour : MonoBehaviour
                 _meleeAttack.StartCoroutine("Attack");
             }
         }
-        
     }
-
 }

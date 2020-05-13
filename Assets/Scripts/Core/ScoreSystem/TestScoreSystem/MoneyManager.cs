@@ -10,7 +10,7 @@ public class MoneyManager : MonoBehaviour
 
     [SerializeField]
     TextMeshProUGUI MoneyText;
-    [HideInInspector]
+    //[HideInInspector]
 
     public int Money;
 
