@@ -1,24 +1,3 @@
 {
-    "Scores": [
-        {
-            "InputName": "Dio Brando",
-            "InputScore": 300
-        },
-        {
-            "InputName": "Jotaro JoStar",
-            "InputScore": 300
-        },
-        {
-            "InputName": "Joseph Jostar",
-            "InputScore": 300
-        },
-        {
-            "InputName": "Kakyoin",
-            "InputScore": 250
-        },
-        {
-            "InputName": "Killer Queen",
-            "InputScore": 200
-        }
-    ]
+    "Scores": []
 }

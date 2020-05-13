@@ -14,9 +14,9 @@ public class SceneTransition : MonoBehaviour
     private void Start()
     {
         isEnable = false;
-        //this.gameObject.SetActive(false);
         sceneController = GameObject.FindGameObjectWithTag("GameController").GetComponent<SceneController>();
         killCount = GameObject.Find("ScoreManager").GetComponent<KillCountManager>();
+        //this.gameObject.SetActive(false);
     }
 
     private void OnTriggerEnter(Collider other)

@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 
 public class HealthSystem : MonoBehaviour
 {
@@ -61,6 +61,11 @@ public class HealthSystem : MonoBehaviour
     {
         yield return new WaitForSeconds(3);
         Destroy(gameObject);
+
+        if (this.tag == "Player")
+        {
+            SceneManager.LoadScene("Test_score");
+        }
 
         if (this.tag == "Enemy")
         {

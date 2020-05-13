@@ -9,9 +9,11 @@ public class KillCountManager : MonoBehaviour
 {
     public static KillCountManager instance;
 
+    SceneTransition sceneTransition;
+
     [SerializeField]
     TextMeshProUGUI KillCounterText;
-    [HideInInspector]
+    //[HideInInspector]
 
     public int KillCounted;
     public int MaxKill = 10;
@@ -28,11 +30,18 @@ public class KillCountManager : MonoBehaviour
         }
     }
 
-    /*void Update()
+    /*void Start()
+    {
+        sceneTransition = GameObject.Find("SceneTransition").GetComponent<SceneTransition>();
+        sceneTransition.gameObject.SetActive(false);
+    }
+
+    void Update()
     {
         if (KillCounted == MaxKill)
         {
             //loadScene();
+            sceneTransition.gameObject.SetActive(true);
         }
     }*/
 
