@@ -12,11 +12,10 @@ public class PositionHelper : SceneController
     public override void Start()
     {
         base.Start();
-        StartCoroutine(movingPosition());
-        //player = GameObject.FindWithTag("Player").transform;
         shopPos = new Vector3(1.25f, 0.05f, -0.5f);
+        player = GameObject.FindWithTag("Player").transform;
 
-        /*switch (prevScene) {
+        switch (prevScene) {
             case "Demo_Level1":
                 player.position = shopPos;
                 break;
@@ -30,9 +29,9 @@ public class PositionHelper : SceneController
                     player.position = Position;
                 }
                 break;
-        }*/
+        }
         
-        if (prevScene == "Demo_Level1")
+        /*if (prevScene == "Demo_Level1")
         {
             player.position = shopPos;
         }
@@ -47,12 +46,6 @@ public class PositionHelper : SceneController
             {
                 player.position = Position;
             }
-        }
-    }
-
-    IEnumerator movingPosition()
-    {
-        yield return new WaitForSeconds(2);
-        player = GameObject.FindWithTag("Player").transform;
+        }*/
     }
 }

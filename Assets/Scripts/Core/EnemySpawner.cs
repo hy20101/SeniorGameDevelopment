@@ -12,6 +12,7 @@ public class EnemySpawner : MonoBehaviour
     int randomEnemies;
 
     SceneTransition sceneTransition;
+    AnimatorControlTest animator;
 
     void Start()
     {
@@ -25,7 +26,7 @@ public class EnemySpawner : MonoBehaviour
         {
             randomSpawnPoint = Random.Range(0, spawnPoints.Length);
             randomEnemies = Random.Range(0, enemies.Length);
-            Instantiate(enemies[randomEnemies], spawnPoints[randomSpawnPoint].position, Quaternion.identity);
+            GameObject enemy = Instantiate(enemies[randomEnemies], spawnPoints[randomSpawnPoint].position, Quaternion.identity);
             currentEnemies++;
         }
     }

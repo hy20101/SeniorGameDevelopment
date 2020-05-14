@@ -1,3 +1,8 @@
 {
-    "Scores": []
+    "Scores": [
+        {
+            "InputName": "Test",
+            "InputScore": 700
+        }
+    ]
 }
