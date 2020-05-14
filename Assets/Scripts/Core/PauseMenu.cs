@@ -12,6 +12,7 @@ public class PauseMenu : MonoBehaviour
 
     void Start()
     {
+        Time.timeScale = 1f;
         HidePauseMenu();
         HelpUI.SetActive(false);
     }
@@ -67,6 +68,7 @@ public class PauseMenu : MonoBehaviour
 
     public void ReturnMainMenu()
     {
+        
         SceneManager.LoadScene(0);
     }
 
