@@ -38,8 +38,8 @@ public class Projectile : MonoBehaviour
         {
             if (isDelayAttack == false)
             {
-
-                if(transform.name == "Player_Archer")
+                GetComponent<AudioSource>().Play();
+                if (transform.name == "Player_Archer")
                 {
                     animator.animator.SetTrigger("AttackBowTrigger");
                 }
