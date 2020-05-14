@@ -17,10 +17,7 @@ public class MinimapManager : MonoBehaviour
     void Start()
     {
         playerCam.enabled = true;
-        MinimapCam.enabled = false;
-
-        
-        
+        MinimapCam.enabled = false;  
     }
 
     // Update is called once per frame

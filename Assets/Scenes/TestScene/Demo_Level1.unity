@@ -861,7 +861,8 @@ PrefabInstance:
       propertyPath: ScoreCounterText
       value: 
       objectReference: {fileID: 429042038}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3633427181709633962, guid: 6d9b427de8cee854a9a73d25b6bcfbf8, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 6d9b427de8cee854a9a73d25b6bcfbf8, type: 3}
 --- !u!1 &1317106010
 GameObject:

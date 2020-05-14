@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6967104577677820605}
   - component: {fileID: 4108381198366175823}
   - component: {fileID: 3702939946364667642}
+  - component: {fileID: 5798157376267927125}
   m_Layer: 0
   m_Name: ScoreManager
   m_TagString: Untagged
@@ -63,6 +64,7 @@ MonoBehaviour:
   KillCounterText: {fileID: 0}
   KillCounted: 0
   MaxKill: 10
+  portal: {fileID: 0}
 --- !u!114 &4108381198366175823
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -87,5 +89,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3c9779dda35af484a9c71f0d94d0e70c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5798157376267927125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6967104577677820601}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3633f2f981ee34548947542e2a348aed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

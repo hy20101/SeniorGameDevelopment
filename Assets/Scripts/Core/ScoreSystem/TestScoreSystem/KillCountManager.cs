@@ -35,10 +35,10 @@ public class KillCountManager : MonoBehaviour
     void Start()
     {
         portal.SetActive(false);
-        if (sceneTransition.isEnable == true)
+        /*if (sceneTransition.isEnable == true)
         {
             portal.SetActive(true);
-        }
+        }*/
     }
 
     void Update()

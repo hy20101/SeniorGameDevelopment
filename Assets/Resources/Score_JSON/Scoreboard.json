@@ -3,6 +3,18 @@
         {
             "InputName": "Test",
             "InputScore": 700
+        },
+        {
+            "InputName": "test4",
+            "InputScore": 600
+        },
+        {
+            "InputName": "test3",
+            "InputScore": 200
+        },
+        {
+            "InputName": "test2",
+            "InputScore": 100
         }
     ]
 }
