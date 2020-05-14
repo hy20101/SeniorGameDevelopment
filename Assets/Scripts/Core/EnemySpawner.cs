@@ -8,16 +8,15 @@ public class EnemySpawner : MonoBehaviour
     public GameObject[] enemies;
     public int maxEnemies;
     public int currentEnemies;
+    public int spawnTime = 5;
+
     int randomSpawnPoint;
     int randomEnemies;
-
-    SceneTransition sceneTransition;
-    AnimatorControlTest animator;
 
     void Start()
     {
         currentEnemies = 0;
-        InvokeRepeating("SpawnEnemies", 3f, 1f);
+        InvokeRepeating("SpawnEnemies", spawnTime, 1f);
     }
 
     void SpawnEnemies()
@@ -26,7 +25,7 @@ public class EnemySpawner : MonoBehaviour
         {
             randomSpawnPoint = Random.Range(0, spawnPoints.Length);
             randomEnemies = Random.Range(0, enemies.Length);
-            GameObject enemy = Instantiate(enemies[randomEnemies], spawnPoints[randomSpawnPoint].position, Quaternion.identity);
+            Instantiate(enemies[randomEnemies], spawnPoints[randomSpawnPoint].position, Quaternion.identity);
             currentEnemies++;
         }
     }
