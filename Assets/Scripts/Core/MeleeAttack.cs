@@ -42,9 +42,8 @@ public class MeleeAttack : MonoBehaviour
         if (Input.GetButtonDown("Fire1")&&this.tag == "Player")
         {
             //Debug.Log("fire");
+            GetComponent<AudioSource>().Play();
             StartCoroutine("Attack");
-
-            
         }
         /*else // Test print all dictionary
         if (Input.GetKeyDown(KeyCode.J))

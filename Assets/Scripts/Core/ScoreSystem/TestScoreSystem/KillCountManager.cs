@@ -48,6 +48,11 @@ public class KillCountManager : MonoBehaviour
         {
             portal.SetActive(true);
         }
+
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            Debug.Log("total kill: " + KillCounted);
+        }
     }
 
     public bool CheckKill()

@@ -57,8 +57,8 @@ public class HealthBar : MonoBehaviour
 
     IEnumerator waitForsecond()
     {
-        yield return new WaitForSeconds(2);
-        print("2");
+        yield return new WaitForSeconds(1);
+        print("1");
         if (CharacterSelectionControl.warriorChoose == true)
         {
             healthSystem = GameObject.Find("Player_Warrior").GetComponent<HealthSystem>();
@@ -78,7 +78,7 @@ public class HealthBar : MonoBehaviour
 
     IEnumerator healthAssign()
     {
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(2);
         print("assign");
         healthSystem.OnHealthPctChanged += HandleHealthChanged;
         yield break;
