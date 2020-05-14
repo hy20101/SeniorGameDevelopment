@@ -12,7 +12,8 @@ public class PositionHelper : SceneController
     public override void Start()
     {
         base.Start();
-        player = GameObject.FindWithTag("Player").transform;
+        StartCoroutine(movingPosition());
+        //player = GameObject.FindWithTag("Player").transform;
         shopPos = new Vector3(1.25f, 0.05f, -0.5f);
 
         /*switch (prevScene) {
@@ -47,5 +48,11 @@ public class PositionHelper : SceneController
                 player.position = Position;
             }
         }
+    }
+
+    IEnumerator movingPosition()
+    {
+        yield return new WaitForSeconds(2);
+        player = GameObject.FindWithTag("Player").transform;
     }
 }

@@ -19,27 +19,16 @@ public class HealthBar : MonoBehaviour
             healthSystem = GameObject.FindGameObjectWithTag("Player").GetComponent<HealthSystem>();
         }*/
         //healthSystem = GameObject.FindGameObjectWithTag("Player").GetComponent<HealthSystem>();
-
-        if (healthSystem != null)
+        if (healthSystem == null)
         {
+            StartCoroutine(waitForsecond());
+            StartCoroutine(healthAssign());
+        }
+
+        /*if (healthSystem != null)
+        {
+            print("health != null");
             healthSystem.OnHealthPctChanged += HandleHealthChanged;
-        }
-    }
-
-    private void Start()
-    {
-        StartCoroutine(waitForsecond());
-        /*if (CharacterSelectionControl.warriorChoose == true)
-        {
-            healthSystem = GameObject.Find("Player_Warrior").GetComponent<HealthSystem>();
-        }
-        else if (CharacterSelectionControl.archerChoose == true)
-        {
-            healthSystem = GameObject.Find("Player_Archer").GetComponent<HealthSystem>();
-        }
-        else if (CharacterSelectionControl.wizardChoose == true)
-        {
-            healthSystem = GameObject.Find("Player_Wizard").GetComponent<HealthSystem>();
         }*/
     }
 
@@ -73,14 +62,25 @@ public class HealthBar : MonoBehaviour
         if (CharacterSelectionControl.warriorChoose == true)
         {
             healthSystem = GameObject.Find("Player_Warrior").GetComponent<HealthSystem>();
+            yield break;
         }
         else if (CharacterSelectionControl.archerChoose == true)
         {
             healthSystem = GameObject.Find("Player_Archer").GetComponent<HealthSystem>();
+            yield break;
         }
         else if (CharacterSelectionControl.wizardChoose == true)
         {
             healthSystem = GameObject.Find("Player_Wizard").GetComponent<HealthSystem>();
+            yield break;
         }
+    }
+
+    IEnumerator healthAssign()
+    {
+        yield return new WaitForSeconds(3);
+        print("assign");
+        healthSystem.OnHealthPctChanged += HandleHealthChanged;
+        yield break;
     }
 }
