@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5686465128590811204}
   - component: {fileID: 2848706737476737649}
   - component: {fileID: 6442634743657763395}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Bar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -64,7 +64,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: 19bf32a8a9deec9469f973d8480e8ce0, type: 3}
-  m_Type: 3
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -86,7 +86,7 @@ GameObject:
   - component: {fileID: 4622948103673480177}
   - component: {fileID: 420399572777931588}
   - component: {fileID: 6725757768163530005}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Health Bar Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -254,7 +254,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 2147490615
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
