@@ -18,6 +18,8 @@ public class KillCountManager : MonoBehaviour
     public int KillCounted;
     public int MaxKill = 10;
 
+    public GameObject gameObject;
+
     void Awake()
     {
         if (instance == null)
@@ -30,28 +32,36 @@ public class KillCountManager : MonoBehaviour
         }
     }
 
-    /*void Start()
+    void Start()
     {
-        sceneTransition = GameObject.Find("SceneTransition").GetComponent<SceneTransition>();
-        sceneTransition.gameObject.SetActive(false);
+        gameObject.SetActive(false);
     }
 
     void Update()
     {
+        //print("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+        if (CheckKill())
+        {
+            gameObject.SetActive(true);
+        }
+    }
+
+    public bool CheckKill()
+    {
         if (KillCounted == MaxKill)
         {
-            //loadScene();
-            sceneTransition.gameObject.SetActive(true);
+            return true;
         }
-    }*/
+        return false;
+    }
 
     public void UpdateKillCounterUI()
     {
         KillCounterText.text = KillCounted.ToString();
     }
 
-    /*public void loadScene()
+    public void ResetKill()
     {
-        SceneManager.LoadScene(6);
-    }*/
+        KillCounted = 0;
+    }
 }

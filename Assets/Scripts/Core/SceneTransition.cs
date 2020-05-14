@@ -13,16 +13,16 @@ public class SceneTransition : MonoBehaviour
 
     private void Start()
     {
-        isEnable = false;
         sceneController = GameObject.FindGameObjectWithTag("GameController").GetComponent<SceneController>();
         killCount = GameObject.Find("ScoreManager").GetComponent<KillCountManager>();
-        //this.gameObject.SetActive(false);
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
+            killCount.ResetKill();
+            killCount.UpdateKillCounterUI();
             if (SceneController.prevScene == "Demo_Level2" && SceneController.currentScene == "Shop")
             {
                 sceneController.LoadScene("Demo_Level3");
@@ -34,12 +34,13 @@ public class SceneTransition : MonoBehaviour
         }
     }
 
-    /*private void Update()
+    /*void Update()
     {
-        if (killCount.KillCounted == killCount.MaxKill)
+        print("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+        if (killCount.CheckKill())
         {
             Debug.Log("portal spawn");
-            this.gameObject.SetActive(true);
+            gameObject.SetActive(true);
         }
     }*/
 }
