@@ -25,6 +25,14 @@ public class ScoreManager : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            Debug.Log("total score: " + ScoreManager.instance.ScorePoint);
+        }
+    }
+
     public void UpdateScoreCounterUI()
     {
         ScoreCounterText.text = ScorePoint.ToString();

@@ -26,6 +26,14 @@ public class MoneyManager : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            Debug.Log("total money: " + MoneyManager.instance.Money);
+        }
+    }
+
     public void UpdateMoneyUI()
     {
         MoneyText.text = Money.ToString();

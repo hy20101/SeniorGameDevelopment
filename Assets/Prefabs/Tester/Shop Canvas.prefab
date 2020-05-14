@@ -580,7 +580,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Armor Upgrade Lv.1
+  m_Text: Armor Upgrade Lv.1 +100 Health
 --- !u!1 &6397446278214947516
 GameObject:
   m_ObjectHideFlags: 0
@@ -853,7 +853,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Weapon Upgrade Lv.2
+  m_Text: Weapon Upgrade Lv.2 +20 Atk
 --- !u!1 &6397446278542845350
 GameObject:
   m_ObjectHideFlags: 0
@@ -1004,7 +1004,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Weapon Upgrade Lv.1
+  m_Text: Weapon Upgrade Lv.1 +15 Atk
 --- !u!1 &6397446278686130229
 GameObject:
   m_ObjectHideFlags: 0
@@ -1438,7 +1438,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Weapon Upgrade Lv.3
+  m_Text: Weapon Upgrade Lv.3 +30 Atk
 --- !u!1 &6397446279245635472
 GameObject:
   m_ObjectHideFlags: 0
@@ -1515,7 +1515,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Armor Upgrade Lv.2
+  m_Text: Armor Upgrade Lv.2 +200 Health
 --- !u!1 &6397446279307634146
 GameObject:
   m_ObjectHideFlags: 0

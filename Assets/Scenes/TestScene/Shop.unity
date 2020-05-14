@@ -379,6 +379,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 263607339382514688, guid: b5fad5a6e8e026946a2481a9d8e375c5,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: e0dee36488379c84bb484b7b2d581f08, type: 2}
     - target: {fileID: 263607339389773510, guid: b5fad5a6e8e026946a2481a9d8e375c5,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -492,6 +497,11 @@ PrefabInstance:
         type: 3}
       propertyPath: toScene
       value: Demo_Level2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5342122329828244645, guid: 94272ff463ecc9c42843192a0a148e3e,
+        type: 3}
+      propertyPath: isEnable
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5342122329828244648, guid: 94272ff463ecc9c42843192a0a148e3e,
         type: 3}

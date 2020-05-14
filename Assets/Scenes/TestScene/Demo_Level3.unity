@@ -606,6 +606,11 @@ PrefabInstance:
       propertyPath: MaxKill
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6967104577677820605, guid: 6d9b427de8cee854a9a73d25b6bcfbf8,
+        type: 3}
+      propertyPath: portal
+      value: 
+      objectReference: {fileID: 613455149}
     - target: {fileID: 6967104577677820606, guid: 6d9b427de8cee854a9a73d25b6bcfbf8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -742,6 +747,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 94272ff463ecc9c42843192a0a148e3e, type: 3}
+--- !u!1 &613455149 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5342122329828244648, guid: 94272ff463ecc9c42843192a0a148e3e,
+    type: 3}
+  m_PrefabInstance: {fileID: 613455148}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &663418288
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1295,6 +1306,7 @@ MonoBehaviour:
   - {fileID: 2094840048}
   maxEnemies: 50
   currentEnemies: 0
+  spawnTime: 5
 --- !u!4 &1310494170
 Transform:
   m_ObjectHideFlags: 0

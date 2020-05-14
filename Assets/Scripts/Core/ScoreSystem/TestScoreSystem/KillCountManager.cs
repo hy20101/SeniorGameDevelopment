@@ -18,7 +18,7 @@ public class KillCountManager : MonoBehaviour
     public int KillCounted;
     public int MaxKill = 10;
 
-    public GameObject gameObject;
+    public GameObject portal;
 
     void Awake()
     {
@@ -34,7 +34,11 @@ public class KillCountManager : MonoBehaviour
 
     void Start()
     {
-        gameObject.SetActive(false);
+        portal.SetActive(false);
+        if (sceneTransition.isEnable == true)
+        {
+            portal.SetActive(true);
+        }
     }
 
     void Update()
@@ -42,7 +46,7 @@ public class KillCountManager : MonoBehaviour
         //print("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
         if (CheckKill())
         {
-            gameObject.SetActive(true);
+            portal.SetActive(true);
         }
     }
 
