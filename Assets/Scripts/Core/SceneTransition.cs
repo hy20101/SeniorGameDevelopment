@@ -7,7 +7,7 @@ public class SceneTransition : MonoBehaviour
 {
     //public bool isEnable;
 
-    [SerializeField] private string toScene;
+    //[SerializeField] private string toScene;
     private SceneController sceneController;
 
     private KillCountManager killCount;

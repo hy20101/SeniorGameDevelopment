@@ -13,8 +13,7 @@ public class PositionHelper : SceneController
     {
         base.Start();
         player = GameObject.FindWithTag("Player").transform;
-
-        /*switch (prevScene) {
+        switch (prevScene) {
             case "Demo_Level1":
                 player.position = new Vector3(1.25f, 0.05f, -0.5f);
                 break;
@@ -24,9 +23,9 @@ public class PositionHelper : SceneController
             case "Shop":
                 player.position = Position;
                 break;
-        }*/
+        }
         
-        if (prevScene == "Demo_Level1")
+        /*if (prevScene == "Demo_Level1")
         {
             player.position = new Vector3(1.25f, 0.05f, -0.5f);
         }
@@ -37,6 +36,6 @@ public class PositionHelper : SceneController
         else if (prevScene == "Shop")
         {
             player.position = Position;
-        }
+        }*/
     }
 }
