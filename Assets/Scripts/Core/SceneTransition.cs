@@ -5,9 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class SceneTransition : MonoBehaviour
 {
-    public bool isEnable;
+    //public bool isEnable;
 
-    //[SerializeField] private string toScene;
+    [SerializeField] private string toScene;
     private SceneController sceneController;
 
     private KillCountManager killCount;
@@ -58,6 +58,15 @@ public class SceneTransition : MonoBehaviour
                     SetPositionLevel3();
                 }
             }
+
+            /*if (SceneController.prevScene == "Demo_Level2" && SceneController.currentScene == "Shop")
+            {
+                sceneController.LoadScene("Demo_Level3");
+            }
+            else
+            {
+                sceneController.LoadScene(toScene);
+            }*/
         }
     }
 

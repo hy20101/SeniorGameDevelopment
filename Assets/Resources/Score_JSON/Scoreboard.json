@@ -15,6 +15,10 @@
         {
             "InputName": "test2",
             "InputScore": 100
+        },
+        {
+            "InputName": "",
+            "InputScore": 0
         }
     ]
 }
