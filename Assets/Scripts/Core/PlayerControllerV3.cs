@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerControllerV3 : MonoBehaviour
 {
-    Animator animator;
+    AnimatorControlTest animator;
 
     public float MoveSpeed = 10f;
     public float RotationSpeed = 0.3f;
@@ -20,7 +20,7 @@ public class PlayerControllerV3 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        animator = GetComponent<Animator>();
+        animator = GetComponent<AnimatorControlTest>();
 
         characterController = GetComponent<CharacterController>();
         CamTransform = Camera.main.transform;
@@ -34,7 +34,7 @@ public class PlayerControllerV3 : MonoBehaviour
         if(Input.GetKeyDown("space"))
         {
             print("hello");
-            animator.SetTrigger("DoHelloTrigger");
+            animator.animator.SetTrigger("DoHelloTrigger");
         }
     }
 
@@ -56,7 +56,7 @@ public class PlayerControllerV3 : MonoBehaviour
         horizontalVelocity = new Vector2(characterController.velocity.x, characterController.velocity.y);
         Speed = characterController.velocity.magnitude;
 
-        animator.SetFloat("MoveSpeed", Speed);
+        animator.animator.SetFloat("MoveSpeed", Speed);
 
 
         //check isGrounded
