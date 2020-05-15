@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class HealthSystem : MonoBehaviour
 {
-    AnimatorControlTest animator;
+    Animator animator;
     //GameObject GO;
 
     public float maxHealth;
@@ -22,7 +22,7 @@ public class HealthSystem : MonoBehaviour
 
     private void Start()
     {
-        animator = GetComponent<AnimatorControlTest>();
+        animator = GetComponent<Animator>();
         //GO = GetComponent<GameObject>();
 
        // print("Tag = "+GO.gameObject.tag);
@@ -39,7 +39,7 @@ public class HealthSystem : MonoBehaviour
         {
             isAlive = false;
 
-            animator.animator.SetBool("AliveBool", isAlive);
+            animator.SetBool("AliveBool", isAlive);
 
             StartCoroutine(waitThreeSeconds());
 

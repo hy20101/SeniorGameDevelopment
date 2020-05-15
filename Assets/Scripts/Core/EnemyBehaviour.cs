@@ -6,7 +6,7 @@ using System;
 
 public class EnemyBehaviour : MonoBehaviour
 {
-    AnimatorControlTest animator;
+    Animator animator;
 
     public float speed = 5f;
     public Transform target;
@@ -23,7 +23,7 @@ public class EnemyBehaviour : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        animator = GetComponent<AnimatorControlTest>();
+        animator = GetComponent<Animator>();
         hpSystem = GetComponent<HealthSystem>();
 
         navComponent = this.gameObject.GetComponent<NavMeshAgent>();
@@ -55,7 +55,7 @@ public class EnemyBehaviour : MonoBehaviour
             navComponent.acceleration = 20f;
             navComponent.stoppingDistance = 2f;
 
-            animator.animator.SetFloat("MoveSpeed", navComponent.acceleration);
+            animator.SetFloat("MoveSpeed", navComponent.acceleration);
 
             if (Vector3.Distance(target.position, transform.position) <= navComponent.stoppingDistance)
             {

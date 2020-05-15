@@ -7,7 +7,7 @@ using System.Linq;
 [RequireComponent(typeof(Unit))]
 public class MeleeAttack : MonoBehaviour
 {
-    AnimatorControlTest animator;
+    Animator animator;
 
     [SerializeField]
     Collider attackRange;
@@ -24,7 +24,7 @@ public class MeleeAttack : MonoBehaviour
 
     private void Start()
     {
-        animator = GetComponent<AnimatorControlTest>();
+        animator = GetComponent<Animator>();
 
         myUnit = GetComponent<Unit>();
 
@@ -78,7 +78,7 @@ public class MeleeAttack : MonoBehaviour
             delayTimer = myUnit.attackDelay();
             StartCoroutine("CountDownDelay");
 
-            animator.animator.SetTrigger("AttackSwordTrigger");
+            animator.SetTrigger("AttackSwordTrigger");
         }
         else
         {
