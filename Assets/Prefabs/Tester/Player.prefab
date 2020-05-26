@@ -15,9 +15,8 @@ GameObject:
   - component: {fileID: 8119982249800724139}
   - component: {fileID: 8119982249800724138}
   - component: {fileID: 8119982249800724137}
-  - component: {fileID: 8119982249800724140}
-  - component: {fileID: 7621127771730741766}
-  - component: {fileID: 7907531614857285868}
+  - component: {fileID: 7916374273603232648}
+  - component: {fileID: 3970804776725203146}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -116,10 +115,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 829907aaf6e111b40b6928c8380ea858, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  AttackDelayInSecond: 1
+  weaponDamage: 0
+  armorHealth: 0
   id: 1
   meleeAttack: {fileID: 0}
   hpSystem: {fileID: 0}
+  money: 0
   attackPower: 10
+  weaponUpgrade1: 0
+  weaponUpgrade2: 0
+  weaponUpgrade3: 0
+  armorUpgrade1: 0
+  armorUpgrade2: 0
+  characterClass: 0
 --- !u!114 &8119982249800724138
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -134,6 +143,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   currentHealth: 0
+  curDeathCount: 0
+  isAlive: 0
+  EnemyScore: 100
+  MoneyWorth: 10
 --- !u!114 &8119982249800724137
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -148,7 +161,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackRange: {fileID: 8119982250286018489}
   inRangeUnitCount: 0
---- !u!114 &8119982249800724140
+--- !u!114 &7916374273603232648
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -157,12 +170,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 8119982249800724116}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79bd21b31f257dd4c96ab701c79ebf12, type: 3}
+  m_Script: {fileID: 11500000, guid: cd67831fa9523444792315b1515f06be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 10
-  JumpHeight: 2
---- !u!114 &7621127771730741766
+  potionCount: 5
+  recoverAmount: 50
+--- !u!114 &3970804776725203146
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -171,23 +184,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 8119982249800724116}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ea9374b509b70f4bba37e4a2ca8cf00, type: 3}
+  m_Script: {fileID: 11500000, guid: bb8a13a396b465448a1abf8d7926e2c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uniqueIdentifier: Player
---- !u!114 &7907531614857285868
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8119982249800724116}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 19fc28a888c18ce4a82d521912c49df1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inventorySize: 16
+  MoveSpeed: 10
+  RotationSpeed: 0.3
+  Gravity: 3
+  JumpSpeed: 10
 --- !u!1 &8119982250286018469
 GameObject:
   m_ObjectHideFlags: 0

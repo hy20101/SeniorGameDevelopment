@@ -50,4 +50,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/AboutUs.unity
     guid: e9bca3a2621cd234aafabbe7d706784c
+  - enabled: 1
+    path: Assets/Scenes/TestScene/TestCore_SceneTransition1.unity
+    guid: ebf557437e1f3f04b80d9d7ee5fd23c8
+  - enabled: 1
+    path: Assets/Scenes/TestScene/TestCore_SceneTransition2.unity
+    guid: fb31633c21eb66f4aaf974e379d12299
   m_configObjects: {}

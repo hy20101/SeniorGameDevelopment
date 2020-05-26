@@ -42,19 +42,7 @@ public class HealthSystem : MonoBehaviour
             animator.SetBool("AliveBool", isAlive);
 
             StartCoroutine(waitThreeSeconds());
-
-            /*if (collision.gameObject.tag != "Player")
-            { SetScore(); }*/
-            //OnDisable();
-            /*if (CompareTag("Enemy"))
-            {
-                curDeathCount = sceneTransition.deathCount + 1;
-            }*/
         }
-        /*if (Input.GetKeyDown(KeyCode.V) && tag == "Player")
-        {
-            AddDamage(10);
-        }*/
     }
 
     IEnumerator waitThreeSeconds()

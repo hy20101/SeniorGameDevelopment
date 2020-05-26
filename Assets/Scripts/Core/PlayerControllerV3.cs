@@ -34,7 +34,7 @@ public class PlayerControllerV3 : MonoBehaviour
         if(Input.GetKeyDown("space"))
         {
             print("hello");
-            animator.animator.SetTrigger("DoHelloTrigger");
+            //animator.animator.SetTrigger("DoHelloTrigger");
         }
     }
 
@@ -56,7 +56,7 @@ public class PlayerControllerV3 : MonoBehaviour
         horizontalVelocity = new Vector2(characterController.velocity.x, characterController.velocity.y);
         Speed = characterController.velocity.magnitude;
 
-        animator.animator.SetFloat("MoveSpeed", Speed);
+        //animator.animator.SetFloat("MoveSpeed", Speed);
 
 
         //check isGrounded

@@ -78,7 +78,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MoneyText: {fileID: 0}
-  Money: 0
+  Money: 1000
 --- !u!114 &3702939946364667642
 MonoBehaviour:
   m_ObjectHideFlags: 0

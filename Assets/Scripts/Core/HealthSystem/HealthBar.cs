@@ -21,15 +21,15 @@ public class HealthBar : MonoBehaviour
         //healthSystem = GameObject.FindGameObjectWithTag("Player").GetComponent<HealthSystem>();
         if (healthSystem == null)
         {
-            StartCoroutine(waitForsecond());
-            StartCoroutine(healthAssign());
+            StartCoroutine(waitForClass());
+            //StartCoroutine(healthAssign());
         }
 
-        /*if (healthSystem != null)
+        if (healthSystem != null)
         {
             print("health != null");
             healthSystem.OnHealthPctChanged += HandleHealthChanged;
-        }*/
+        }
     }
 
     private void HandleHealthChanged(float pct)
@@ -55,7 +55,7 @@ public class HealthBar : MonoBehaviour
         foregroundImage.fillAmount = pct;
     }
 
-    IEnumerator waitForsecond()
+    IEnumerator waitForClass()
     {
         yield return new WaitForSeconds(1);
         print("1");

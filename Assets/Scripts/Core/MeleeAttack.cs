@@ -42,7 +42,7 @@ public class MeleeAttack : MonoBehaviour
         if (Input.GetButtonDown("Fire1")&&this.tag == "Player")
         {
             //Debug.Log("fire");
-            GetComponent<AudioSource>().Play();
+            //GetComponent<AudioSource>().Play();
             StartCoroutine("Attack");
         }
         /*else // Test print all dictionary
@@ -61,7 +61,7 @@ public class MeleeAttack : MonoBehaviour
     {
         if (isDelayAttack == false)
         {
-            //Debug.Log("Attacking!!!! Success");
+            Debug.Log("Attacking!!!! Success");
             //TODO: Add attack damage
 
             foreach (KeyValuePair<int, Unit> entry in inRangeDict)
@@ -78,7 +78,7 @@ public class MeleeAttack : MonoBehaviour
             delayTimer = myUnit.attackDelay();
             StartCoroutine("CountDownDelay");
 
-            animator.SetTrigger("AttackSwordTrigger");
+            //animator.SetTrigger("AttackSwordTrigger");
         }
         else
         {
