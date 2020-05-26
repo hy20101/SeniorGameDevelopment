@@ -14,17 +14,6 @@ public class HealthBar : MonoBehaviour
 
     private void Awake()
     {
-        /*if (healthSystem == null)
-        {
-            healthSystem = GameObject.FindGameObjectWithTag("Player").GetComponent<HealthSystem>();
-        }*/
-        //healthSystem = GameObject.FindGameObjectWithTag("Player").GetComponent<HealthSystem>();
-        if (healthSystem == null)
-        {
-            StartCoroutine(waitForClass());
-            //StartCoroutine(healthAssign());
-        }
-
         if (healthSystem != null)
         {
             print("health != null");
@@ -53,34 +42,5 @@ public class HealthBar : MonoBehaviour
 
         Debug.Log("foregroundImage.fillAmount ");
         foregroundImage.fillAmount = pct;
-    }
-
-    IEnumerator waitForClass()
-    {
-        yield return new WaitForSeconds(1);
-        print("1");
-        if (CharacterSelectionControl.warriorChoose == true)
-        {
-            healthSystem = GameObject.Find("Player_Warrior").GetComponent<HealthSystem>();
-            yield break;
-        }
-        else if (CharacterSelectionControl.archerChoose == true)
-        {
-            healthSystem = GameObject.Find("Player_Archer").GetComponent<HealthSystem>();
-            yield break;
-        }
-        else if (CharacterSelectionControl.wizardChoose == true)
-        {
-            healthSystem = GameObject.Find("Player_Wizard").GetComponent<HealthSystem>();
-            yield break;
-        }
-    }
-
-    IEnumerator healthAssign()
-    {
-        yield return new WaitForSeconds(2);
-        print("assign");
-        healthSystem.OnHealthPctChanged += HandleHealthChanged;
-        yield break;
     }
 }
